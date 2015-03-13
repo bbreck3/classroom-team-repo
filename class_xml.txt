@@ -1,0 +1,173 @@
+*********************************************
+***	Below: class.xml code ***************
+*********************************************
+-----------------------------------------------
+
+
+	<Window class="class">
+		 <View id="class_1"></View>
+		 	
+		 	
+		<View id="weather_status"></View>
+		<Label id="temperature" text="80"></Label>
+		<View id="assignments"></View>
+			<Label id="assignmnets_string"><Label>
+				
+		
+		<View id="announcements"></View>
+			<Label id="announcements_string"><Label>
+		
+		<View id="lecture"></View>
+			<Label id="lecture_string"><Label>
+		
+		<View id="grades"></View>
+			<Label id="grades_string"><Label>
+		
+		
+	</Window>
+</Alloy>
+
+
+*********************************************
+***	END: class.xml code ***************
+*********************************************
+
+
+
+*************************************************************************************
+***	Below: additions to index.tss code to make the class.xml file ***************
+*************************************************************************************
+-------------------------------------------------------------------------------------
+
+
+
+/**
+ * 	
+ * 
+ * 
+ * 		Course Screen
+ * 
+ * 
+ * 
+ */
+
+
+/**
+ * 	
+ * 	All class elements below
+ */
+".class":{
+	
+		
+}
+
+
+/** 
+ * 	
+ * 	ALl div elements below
+ */
+
+
+		/*
+		 * 
+		 * class components---> Views
+		 */
+
+"#class_1":{
+	
+	
+}
+
+
+
+"#assignments":{
+	hiegth:50,
+	top:5,
+	backgroundColor:"blue",
+	layout:"verticle",
+
+}
+
+"#announcements":{
+	
+	heigth:50,
+	top:55,
+	backgroundColor:"red",
+	layout:"verticle",
+}
+
+
+"#lecture":{
+	
+	hiegth:50,
+	top:110,
+	backgroundColor:"green",
+	layout:"verticle",
+	
+}
+
+
+"#grades":{
+	
+	heigth:50,
+	top:160,
+	backgroundColor:"purple",
+	layout:"verticle",
+	
+	
+}
+
+
+
+	/**
+	 * 	
+	 * Class components --> Strings		
+	 * 
+	 */
+
+"#assignmnets_string":{
+	top:5,
+	color:"black",
+	font:{
+		fontSize: 50,
+	},
+	layout:"verticle",
+	
+	
+
+}
+
+"#announcements_string":{
+	top:55,
+	color:"black",
+	font:{
+		fontSize: 50,
+	},
+	layout:"verticle",
+	
+}
+
+
+"#lecture_string":{
+	top:115,
+	color:"black",
+	font:{
+		fontSize: 50,
+	},
+	layout:"verticle",
+	
+	
+}
+
+
+"#grades_string":{
+	
+	top:170,
+	color:"black",
+	font:{
+		fontSize: 50,
+	},
+	layout:"verticle",
+	
+	
+}

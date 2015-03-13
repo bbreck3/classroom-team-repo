@@ -1,0 +1,549 @@
+
+/*
+ * 
+ * 
+ * 	Welcome Screen
+ * 
+ */
+"Window":{
+	
+	
+	
+}
+
+/**  
+ * 	
+ * 		All classes below
+ * 
+ */
+"#dash": {
+	backgroundColor:"white"
+
+}
+
+
+
+/**
+ * 	
+ * 	All Div elements bellow
+ * 
+ */
+"#course1":{
+	width:380,
+	height:300,
+	top:175,
+	left:5,
+	
+	
+	
+	
+}
+
+"#course2":{
+	width:380,
+	height:300,
+	top:175,
+	right:5,
+	
+	//backgroundColor: "red",
+	
+	
+	
+},
+"#course3":{
+	width:380,
+	height:300,
+	top:450,
+	left:5,
+	
+	//backgroundColor: "yellow",
+	
+	
+	
+}
+"#course4":{
+	width:380,
+	height:300,
+	top:450,
+	right:5,
+	
+	//backgroundColor: "purple",
+	
+	
+	
+}
+"#info":{
+	width:795,
+	height:800,
+	top:850,
+	right:5,
+	textSize: 100,
+	backgroundColor: "white",
+	textAlign:Ti.UI.TEXT_ALIGNMENT_CENTER,
+	
+	
+	
+},
+
+"#welcome_view":{
+	
+	width:800,
+	height:175,
+	top:5,
+	right:5,
+	font:{
+		fontSize: 50,
+	},
+	color: "black",
+	backgroundColor: "white"
+	
+	
+	
+}
+"#test":{ // this is actucally the Announcements tab at tbe bottom
+	
+	width:380,
+	height: 100,
+	top:750,
+	left: 5,
+	color:"black",
+	font:{
+		fontSize:40,
+	},
+	color:"black",
+	
+	
+	
+},
+"#overview":{
+	
+	width:380,
+	height:100,
+	top:5,
+	right:5,
+	font:{
+		fontSize: 50,
+	},
+	//color:"black",
+	//backgroundColor:"green",
+	
+	
+	
+},
+"#grade":{
+	hight:25,
+	width:50,
+	top:15,
+	right:15,
+	font:{
+		fontSize: 30,
+	},	
+	
+	
+}
+
+"#pending_assignments":{
+	hight:15,
+	width:50,
+	top:25,
+	right:30,
+	font:{
+		fontSize: 20,
+	},	
+	
+	
+}
+
+"#total_assigments":{
+	hight:15,
+	width:50,
+	top:25,
+	right:5,
+	font:{
+		fontSize: 20,
+	},	
+	
+	
+}
+
+"#submited_assigments":{
+	hight:15,
+	width:50,
+	top:25,
+	right:15,
+	font:{
+		fontSize: 20,
+	},	
+	
+	
+}
+
+"#division_symbol":{
+	hight:15,
+	width:50,
+	top:25,
+	right:10,
+	font:{
+		fontSize: 20,
+	},	
+	
+	
+}
+"#weather_status":{
+	
+	width:120,
+	height:100,
+	top:5,
+	right:5,
+	font:{
+		fontSize: 50,
+	},
+	//color:"black",
+	backgroundColor:"green",
+	
+	
+	
+},
+
+
+/*"#test":{
+	width:800,
+	height:175,
+	top:5,
+	right:5,
+	color:"black",
+	backgroundColor:"white",
+	font:{
+		fontSize: 50,
+	},
+	
+}*/
+
+/**"#tab1":{
+	width:190,
+	height:300,
+	top:750,
+	right:5,	
+	backgoundColor:"black",	
+}
+"#tab2":{
+	
+	
+	width:800,
+	height:800,
+	top:850,
+right:5,
+/*	width:190,
+	height:300,
+	top:750,
+	left:5,
+	backgoundColor:"black",	
+}*/
+
+"#DueDates":{
+	/*width:380,
+	height:100,
+	top:750,
+	right:5,
+	font:{
+		fontSize: 40,
+	},
+	color:"black",
+	backgroundColor:"red",*/
+	width:380,
+	height: 100,
+	top:750,
+	right: 5,
+	color:"black",
+	font:{
+		fontSize:40,
+	},
+	color:"black",
+},
+"#Updates":{ //this is actually the welcome at the top...for some reason a bug or somthing makes it not work unless I have it named this and the settings exactly like this
+	
+	width:710,
+	height: 100,
+	top:5,
+	left: 5,
+	color:"black",
+	font:{
+		fontSize:50,
+	},
+	color:"black",
+}
+/*This should probably be a text area*/
+"#assignment_1":{
+	width:120,
+	height: 50,
+	top:850,
+	right: 110,
+	color:"black",
+	font:{
+		fontSize:20,
+	},
+	color:"black",
+	
+}
+
+/***
+ * 
+ *    Assignments Due layout
+ * 			
+ * 
+ * 													*/
+
+
+"#assignment_1":{
+	width: 150,
+	height: 50,
+	top:850,
+	right: 110,
+	color:"black",
+	font:{
+		fontSize:20,
+	}
+}
+"#assignment_2":{
+	width: 150,
+	height: 50,
+	top:900,
+	right: 110,
+	color:"black",
+	font:{
+		fontSize:20,
+	}
+	
+}
+"#assignment_3":{
+	width: 150,
+	height: 50,
+	top:950,
+	right: 110,
+	color:"black",
+	font:{
+		fontSize:20,
+	}
+}
+"#assignment_4":{
+	width: 150,
+	height: 50,
+	top:1000,
+	right: 110,
+	color:"black",
+	font:{
+		fontSize:20,
+	}
+}
+"Label":{
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color:"black",
+	
+}
+
+
+/**
+ * 					String representing the first assignment under the assignment notification bar. DId not work...
+ * 					This did not work for whatever reason. Investigate Later:
+ * 
+ * 					"#assignment_2":{
+						width: 120,
+							height: 50,
+							top:900,
+							right: 110,
+							color:"black",
+							font:{
+							fontSize:20,
+							}
+	
+							}
+ 						*/
+
+/** Annoucements Layout */
+	
+	
+	"#announcement_1":{
+	width: 150,
+	height: 50,
+	top:850,
+	left: 110,
+	color:"black",
+	font:{
+		fontSize:20,
+	}
+}
+	
+	"#announcement_2":{
+	width: 150,
+	height: 50,
+	top:900,
+	left: 110,
+	color:"black",
+	font:{
+		fontSize:20,
+	}
+	
+}
+"#announcement_3":{
+	width:150,
+	height: 50,
+	top:950,
+	left: 110,
+	color:"black",
+	font:{
+		fontSize:20,
+	},
+	color:"black",
+}
+"#announcement_4":{
+	width:150,
+	height: 50,
+	top:1000,
+	left: 110,
+	color:"black",
+	font:{
+		fontSize:20,
+	},
+	color:"black",
+}
+
+
+
+/**
+ * 	
+ * 
+ * 
+ * 		Course Screen
+ * 
+ * 
+ * 
+ */
+
+
+/**
+ * 	
+ * 	All class elements below
+ */
+".class":{
+	
+		
+}
+
+
+/** 
+ * 	
+ * 	ALl div elements below
+ */
+
+
+		/*
+		 * 
+		 * class components---> Views
+		 */
+
+"#class_1":{
+	
+	
+}
+
+
+
+"#assignments":{
+	hiegth:50,
+	top:5,
+	backgroundColor:"blue",
+	layout:"verticle",
+
+}
+
+"#announcements":{
+	
+	heigth:50,
+	top:55,
+	backgroundColor:"red",
+	layout:"verticle",
+}
+
+
+"#lecture":{
+	
+	hiegth:50,
+	top:110,
+	backgroundColor:"green",
+	layout:"verticle",
+	
+}
+
+
+"#grades":{
+	
+	heigth:50,
+	top:160,
+	backgroundColor:"purple",
+	layout:"verticle",
+	
+	
+}
+
+
+
+	/**
+	 * 	
+	 * Class components --> Strings		
+	 * 
+	 */
+
+"#assignmnets_string":{
+	top:5,
+	color:"black",
+	font:{
+		fontSize: 50,
+	},
+	layout:"verticle",
+	
+	
+
+}
+
+"#announcements_string":{
+	top:55,
+	color:"black",
+	font:{
+		fontSize: 50,
+	},
+	layout:"verticle",
+	
+}
+
+
+"#lecture_string":{
+	top:115,
+	color:"black",
+	font:{
+		fontSize: 50,
+	},
+	layout:"verticle",
+	
+	
+}
+
+
+"#grades_string":{
+	
+	top:170,
+	color:"black",
+	font:{
+		fontSize: 50,
+	},
+	layout:"verticle",
+	
+	
+}
+
+
+
+
+
+
+

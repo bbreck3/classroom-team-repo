@@ -1,0 +1,68 @@
+<Alloy>
+	<Window id="container">
+	
+		 
+		 	
+		<!-- Weather view container-->
+		<View id="weather_status"></View>
+		
+		<!-- Label to contain the Digit or Value of the temperature-->
+		<Label id="temperature" text="80" color="black" ></Label>
+		
+		
+		
+		
+		
+		
+		<!-- Welcome Message at the top -->
+		 <Label id="test" text="Welcome" color="black" ></Label>	
+		 
+		 
+		 <!--
+					THe follolowing section is dedicated to the course grade which includes the following components:
+					-Total Grade for the course: a numeric value will represent this:  Example: -- : 80
+					- Pending Assignments: Number of pendending assignments left to turn im: this will be represent by a single integer value: EX: 2
+					-Submited Assignments: Number of assignments that have been successfully submitted: this will be represented by an integer value: EX: 8
+					-Division Symbol: The sole purpose of this is to give the visual representation of a ratio of submitted assignments over the number of total assognments given. EX: /
+					-Total Assignents: This number represent the total number of assignments assigned. THis will be represented by an Integer value: EX: 10
+				                                           -->
+			<!-- String containing the overall course grade value -->
+			<Label id="grade" color="black" text="assignments"></Label>
+			<Label id="pending_assignments" text="2" color="black" ></Label>
+			<Label id="submited_assignments" color="black" text="8"></Label>
+			<Label id="division_symbol" color="black" text="/"></Label>
+			<Label id="total_assignments" color="black" text="10"></Label>
+			
+			
+			
+			
+			
+			
+		<!--	
+			<Label id="grade" text="80" color="black">  </Label>
+			<Label id="pending_assignments" text="2" color="black">  </Label>
+			<Label id="submited_assigments" text="8" color="black">  </Label>
+			<Label id="division_symbol" text="/" color="black">  </Label>
+			<Label id="total_assignments" text="10" color="black">  </Label>   -->
+		
+		<!-- View and Label for each sub component of th course--> 
+		<View id="assignments"></View>
+		<Label id="assignmnets_string" color="black" text="assignments"></Label>
+				
+		<View id="announcements"></View>
+		<Label id="announcements_string" color="black" text="announcements"></Label>
+		
+		<View id="lecture"></View>
+		<Label id="lecture_string" color="black" text="lecture" ></Label>
+		 
+		<View id="grades"></View>
+		<Label id="grades_string" color="black" text="grades" ></Label>
+		
+		
+		<!-- Example to show the Pop Up to Check In -->
+		<View id="checkin_view"></View>
+	
+		<Label id="checkin_string"  color="black" text="Check In!"> </Label>
+		
+	</Window>
+</Alloy>

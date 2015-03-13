@@ -1,0 +1,80 @@
+<Alloy>
+	<Window id="dash">
+		
+		<View id="course2"> The </View>
+		<View id="course3"> The </View>
+		<View id="course4"> The </View>
+		
+		<!-- Welcome At the top -->
+		
+		<Label id="Updates" color="black" backgroundColor="yellow"  text="Welcome"></Label>
+		
+			<!-- Course Selection: Images that once click redirect to that specific course and its cub components -->
+			<Button title="course1" id="course1"/>  -->			
+			<!--<View id ="course1" backgroundImage="/images/download.jpg"  /> --><!--image="/images/download.jpg"/> -->
+			<ImageView id ="course2" image="/images/download.jpg"/>
+			<ImageView id ="course3" image="/images/download.jpg"/>
+			<ImageView id ="course4" image="/images/download.jpg"/>
+			<!-- Contianer for the weather info -->
+			<View id="weather_status"> </View>
+			
+			
+			<!-- Assignment Due -->
+			
+				
+			<!--
+					Tab Section that will have a tab for annoucements for the current week, and a Tab for the upcoming assigments due and important due dates
+																	
+			// This is  																																						-->	
+			<Label id="test" color="black" backgroundColor="green" text="Announcements"></Label>		
+			<Label id="DueDates" color="black" backgroundColor="red" text="Upcoming Asssignments"></Label>
+			
+			<!--   Assignements -->
+			<!--  String to represent the assignments due-->
+			<!--<View id="labels"> </View>-->
+			
+			
+			<Label id="assignment_1" color="black"  text="Assignment 1"></Label>
+			<Label id="assignment_2" color="black" text="Assignment 2"></Label>
+			
+			<Label id="assignment_3" color="black" text="Assignment 3"></Label>
+			
+			<Label id="assignment_4" color="black" text="Assignment 4"></Label>
+			
+			<!--   Announcements -->
+			<!--  String to represent the announcenments due-->
+			<Label id="announcement_1" color="black" text="Announcement 1"></Label>
+			
+			
+			<Label id="announcement_2" color="black" text="Announcement 2"></Label>
+			
+			<Label id="announcement_3" color="black" text="Announcement 3"></Label>
+			
+			<Label id="announcement_4" color="black" text="Announcement 4"></Label>
+</Window>
+</Alloy>
+			
+		<!-- Tab view to be implimented later -->
+		
+		
+		<!--<View id="tab1"> </View>
+		<View id="tab2"> </View>-->
+		
+		
+	<!--<Window id="info">
+		 <TabGroup backgroundColor="white" id="info">
+            <Tab id="tab1" title="Tab 1" icon="KS_nav_views.png">
+              
+                   <Label id="label" color="#999">I am Window 1</Label>
+               
+            </Tab>
+            <Tab id="tab2" title="Tab 2" icon="KS_nav_views.png">
+               
+                    <Label id="label" color="#999">I am Window 2</Label>
+                    
+               
+            </Tab>
+            <!-- Use the Require tag to include external Ti.UI.Tab views 
+   </TabGroup>	   -->
+		
+
