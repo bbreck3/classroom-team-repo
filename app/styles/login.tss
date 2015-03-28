@@ -58,10 +58,18 @@ textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
  	layout: 'vertical',
     width: Ti.UI.FILL,
     height: Ti.UI.FILL,
+     
+    
 }
 "#login" : {
 	
- backgroundColor: '#797979'
+ backgroundColor: '#797979',
+ fullscreen: false,
+    orientationModes: [
+		Ti.UI.PORTRAIT,
+		Ti.UI.UPSIDE_PORTRAIT
+]
+   
 }
 "#password" : {
 	width : "75%",
