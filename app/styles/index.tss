@@ -21,8 +21,7 @@
 "#dash": {
 	fullscreen: false,
     orientationModes: [
-		Ti.UI.PORTRAIT,
-		Ti.UI.UPSIDE_PORTRAIT
+		Ti.UI.PORTRAIT
 ]
    
 
