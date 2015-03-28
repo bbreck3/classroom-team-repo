@@ -1,13 +1,14 @@
 <Alloy>
 	<Window id="login">
 		<View id = 'contain' layout='vertical'>
+		<ImageView id="logo" image="/images/classmate.png" />	
 		<View id="ucon">
-		<Label id="label1" color="white" shadowColor="#aaa" text="Username" textAlign="Ti.UI.TEXT_ALIGNMENT_LEFT"
+		<Label id="label1" color="white" shadowColor="#aaa" text="Username" 
              />
 		<TextField id="username"></TextField>
 		</View>
 		<View id="pcon">
-		<Label id="label2" color="white" shadowColor="#aaa" text="Password" textAlign="Ti.UI.TEXT_ALIGNMENT_LEFT"
+		<Label id="label2" color="white" shadowColor="#aaa" text="Password" 
              />
 		<TextField id="password"></TextField>
 		</View>

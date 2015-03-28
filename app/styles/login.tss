@@ -4,7 +4,7 @@
 	title:'Remember me',
 }
  "#ucon": {
- 	top :30,
+ 	top :10,
     layout: 'horizontal',
     width: Ti.UI.FILL,
     height: '7%',
@@ -24,14 +24,21 @@
 
   
 }
+"#logo" : {
+	top:20
+
+  
+}
 "#label1" : {
 	
 width : "25%",
+textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
   
 }
 "#label2" : {
 	
 	width : "25%",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
   
 }
 "#label3" : {
@@ -57,12 +64,12 @@ width : "25%",
  backgroundColor: '#797979'
 }
 "#password" : {
-	width : "65%",
+	width : "75%",
 	borderStyle: Ti.UI.INPUT_BORDERSTYLE_LINE
   
 }
 "#username" : {
-	width : "65%",
+	width : "75%",
 	borderStyle: Ti.UI.INPUT_BORDERSTYLE_LINE
   
 }
