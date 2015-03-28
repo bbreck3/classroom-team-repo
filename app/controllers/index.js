@@ -11,9 +11,11 @@ function doClick(e) {
  * 
  */
 
-Alloy.Globals.dash = $.dash;
 
-$.dash.open();
+var win=Alloy.createController('login').getView();
+ win.open();
+//Alloy.Globals.dash = $.dash;
+//$.dash.open();
 
 
 var button = Titanium.UI.createButton({

@@ -29,7 +29,7 @@
  * 
  */
 "#course1":{
-	width:380,
+	width:'30%',
 	height:300,
 	top:175,
 	left:5,
@@ -40,7 +40,7 @@
 }
 
 "#course2":{
-	width:380,
+	width:'30%',
 	height:300,
 	top:175,
 	right:5,
@@ -51,7 +51,7 @@
 	
 },
 "#course3":{
-	width:380,
+	width:'30%',
 	height:300,
 	top:450,
 	left:5,
@@ -62,7 +62,7 @@
 	
 }
 "#course4":{
-	width:380,
+	width:'30%',
 	height:300,
 	top:450,
 	right:5,
