@@ -65,7 +65,8 @@ textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
 }
 "#password" : {
 	width : "75%",
-	borderStyle: Ti.UI.INPUT_BORDERSTYLE_LINE
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_LINE,
+	passwordMask:true
   
 }
 "#username" : {
