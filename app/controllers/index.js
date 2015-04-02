@@ -24,6 +24,17 @@ var button = Titanium.UI.createButton({
    width: 100,
    height: 50
 });
+$.course1.addEventListener('longpress', function() {
+	login('course1');
+});
+$.course1.addEventListener('click', function() {
+	var win=Alloy.createController('classes').getView();
+ 	win.open();
+});
+
+function login(course){
+	alert('Login Successful!');
+};
 button.addEventListener('click',function(e)
 {                                                                                                                                                                                                      
     Alloy.Globals.dash = $.container;

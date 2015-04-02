@@ -1,0 +1,12 @@
+<Alloy>
+	<Window id='classes'>
+		<View id = 'contain' layout='vertical'>
+		<TableView  top="20">
+			<TableViewRow id="assignment" title="Assignments" hasChild="true"></TableViewRow>
+			<TableViewRow id="lecture" title="Lecture" hasChild="true"></TableViewRow>
+			<TableViewRow id="grades" title="Grades" hasChild="true"></TableViewRow>
+			<TableViewRow id="collaboration" title="Collaboration" hasChild="true"></TableViewRow> -->
+	</TableView>
+		</View>
+	</Window> 
+</Alloy>
