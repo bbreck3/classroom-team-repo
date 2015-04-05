@@ -3,11 +3,7 @@
 	
 	<Window id="dash">
 		<View id="container">
-		<!-- <View id="course2"> The </View>
-		<View id="course3"> The </View>
-		<View id="course4"> The </View> -->
 		
-		<!-- Welcome At the top -->
 		
 		<Label id="select" color="white" text="Click to Select a Course, Hold to Login" backgroundColor="black" ></Label>
 		
@@ -30,47 +26,7 @@
 				</View>
 				
 			</View>			
-			<!--<View id ="course1" backgroundImage="/images/download.jpg"  /> --><!--image="/images/download.jpg"/> -->
-			<!-- <ImageView id ="course2" image="/images/download.jpg"/>
-			<ImageView id ="course3" image="/images/download.jpg"/>
-			<ImageView id ="course4" image="/images/download.jpg"/> -->
-			<!-- Contianer for the weather info -->
 			
-			<!-- <View id="weather_status"> </View> -->
-			
-			
-			<!-- Assignment Due -->
-			
-				
-			<!--
-					Tab Section that will have a tab for annoucements for the current week, and a Tab for the upcoming assigments due and important due dates
-																	
-			// This is  																																						-->	
-			<!-- <Label id="test" color="black" backgroundColor="green" text="Announcements"></Label>		
-			<Label id="DueDates" color="black" backgroundColor="red" text="Upcoming Asssignments"></Label> -->
-			
-			<!--   Assignements -->
-			<!--  String to represent the assignments due-->
-			<!--<View id="labels"> </View>-->
-			
-			
-			<!-- <Label id="assignment_1" color="black"  text="Assignment 1"></Label>
-			<Label id="assignment_2" color="black" text="Assignment 2"></Label>
-			
-			<Label id="assignment_3" color="black" text="Assignment 3"></Label>
-			
-			<Label id="assignment_4" color="black" text="Assignment 4"></Label> -->
-			
-			<!--   Announcements -->
-			<!--  String to represent the announcenments due-->
-			<!-- <Label id="announcement_1" color="black" text="Announcement 1"></Label>
-			
-			
-			<Label id="announcement_2" color="black" text="Announcement 2"></Label>
-			
-			<Label id="announcement_3" color="black" text="Announcement 3"></Label>
-			
-			<Label id="announcement_4" color="black" text="Announcement 4"></Label> -->
 			</View>
 </Window>
 </Alloy>

@@ -14,17 +14,11 @@ function doClick(e) {
 
 var win=Alloy.createController('login').getView();
  win.open();
-//Alloy.Globals.dash = $.dash;
-//$.dash.open();
 
 
-var button = Titanium.UI.createButton({
-   title: 'Hello',
-   top: 10,
-   width: 100,
-   height: 50
-});
-$.course1.addEventListener('longpress', function() {
+
+
+$.course1.addEventListener('longpress', function() {  // <-- once the user is logged in from the login screen, is it really neccessary to log them in again?
 	login('course1');
 });
 $.course1.addEventListener('click', function() {
@@ -32,25 +26,27 @@ $.course1.addEventListener('click', function() {
  	win.open();
 });
 
+$.course2.addEventListener('click', function() {
+	var win=Alloy.createController('classes').getView();
+ 	win.open();
+});
+
+$.course3.addEventListener('click', function() {
+	var win=Alloy.createController('classes').getView();
+ 	win.open();
+});
+
+$.course4.addEventListener('click', function() {
+	var win=Alloy.createController('classes').getView();
+ 	win.open();
+});
+
+
 function login(course){
 	alert('Login Successful!');
 };
-button.addEventListener('click',function(e)
-{                                                                                                                                                                                                      
-    Alloy.Globals.dash = $.container;
 
-		$.dash.open();
-});
 
-var view_course = Titanium.UI.createImageView({
-	
-	title: 'Hello',
-   top: 10,
-   width: 100,
-   height: 50,
-   backgroundImage:"/images/download.jpg",
-   
-});
 
 
 
