@@ -1,43 +1,8 @@
-var args = arguments[0] || {};
-var Cloud = require('ti.cloud');	
-
-function checkLogin(e){
-	
-	
-	Cloud.Users.create({
-	username: $.username.value,
-	password: $.password.value,
-	password_confirmation: $.password.value
-	}, function (e) {
-	    if (e.success) {
-	        var user = e.users[0];
-	        alert('Success:\n' +
-	        'id: ' + user.id + '\n' +
-	        'sessionId: ' + Cloud.sessionId + '\n');
-	        var dash=Alloy.createController('index').getView();
-    	Alloy.Globals.dash = $.dash;
-		dash.open();
-	} else {
-	    alert('Error:\n' +
-	            ((e.error && e.message) || JSON.stringify(e)));
-	    }
-	});
-
-		
-};
-
-
-
-
-
-
-
-
 /*
 	Library to wrap app-specific functionality around the ACS APIs
 */
 // a couple local variables to save state
-/*var currentUser = null;
+var currentUser = null;
 var loggedIn = false;
 
 var Cloud = require('ti.cloud');
@@ -55,9 +20,6 @@ exports.isLoggedIn = function() {
                 loggedIn = true;
                 currentUser = e.users[0];
                 cb();
-                var dash=Alloy.createController('index').getView();
-    	Alloy.Globals.dash = $.dash;
-		dash.open();
                 return loggedIn;
             });
         } else {
@@ -71,7 +33,7 @@ exports.isLoggedIn = function() {
 // Add createUser() here, accepts username, password, and callback function
 // ACS API requires password & confirm, but we do the checking elsewhere so use the same for both here
 // API also logs in the user, so make sure to set loggedIn and currentUser appropriately
-function createUser(username, password, callback) {
+exports.createUser = function(username, password, callback) {
 	Cloud.Users.create({
 		username: username,
 		password: password,
@@ -83,7 +45,7 @@ function createUser(username, password, callback) {
 	        loggedIn = true;
 	        callback(e.users[0]);
 	    } else {
-	    	alert('Error' + JSON.stringify(e)); // Ti.API.info --> the same as System.out.print in java and cou << in C++
+	    	Ti.API.info('Error' + JSON.stringify(e));
 	    	loggedIn = false;
 	    	currentUser = null;
 	    	callback(false);
@@ -95,19 +57,18 @@ function createUser(username, password, callback) {
 // Add your code to export the login() method here
 // accepts username, password, and callback (function)
 // make sure to set loggedIn and currentUser appropriately
-function login(username, password, callback) {
+exports.login = function(username, password, callback) {
 	Cloud.Users.login({
-	    login: $.username.value,
-	    password: $.password.value
+	    login: username,
+	    password: password
 	}, function (e) {
 	    if (e.success) {
 	    	currentUser = e.users[0];
 	    	loggedIn = true;
 	    	Ti.App.Properties.setString('sessionid',e.meta.session_id);
 			callback(loggedIn);
-		
 	    } else {
-	        alert('Error:\\n' + ((e.error && e.message) || JSON.stringify(e)));
+	        Ti.API.info('Error:\\n' + ((e.error && e.message) || JSON.stringify(e)));
 	        loggedIn = false;
 	        currentUser = null;
 			callback(loggedIn);
@@ -117,7 +78,7 @@ function login(username, password, callback) {
 
 // Add logout() here, make sure to set loggedIn and currentUser appropriately
 // and clear the app property
-function logout() {
+exports.logout = function() {
 	Cloud.Users.logout(function (e) {
 	    if (e.success) {
 	        currentUser = null;
@@ -125,7 +86,4 @@ function logout() {
 	        Ti.App.Properties.setString('sessionid', '');
 	    }
 	});		
-};*/
-
-
-  
+};
