@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="script.js"></script>
+	<script>
+	$(document).ready(function(){
+	$("#messages").css("background-color","black");
+		 $("#messages").css("color","yellow");
+		 $("#uploads").css("background-color","white");
+		 $("#uploads").css("color","black");
+		 $("#grades").css("background-color","white");
+		 $("#grades").css("color","black");
+		 $("#calendar").css("color","black");
+		 $("#calendar").css("background-color","white");
+		 $("#attendance").css("color","black");
+		  $("#attendance").css("background-color","white");
+		
+	});
+	
+    /**$("#uploads").click(function(){
+	 $("#uploads").css("background-color","black");
+		 $("#uploads").css("color","yellow");
+        $("#messages").css("background-color","white");
+		 $("#messages").css("color","black");
+		  $("#grades").css("background-color","white");
+		   $("#grades").css("color","black");
+		    $("#calendar").css("background-color","white");
+			 $("#calendar").css("color","black");
+			 $("#selector").text("Uploads selected: Put uploads info here").height("50");
+    });
+	
+	
+	 $("#messages").click(function(){
+	 
+		$("#uploads").css("background-color","white");
+		 $("#uploads").css("color","black");
+		 $("#messages").css("background-color","black");
+		 $("#messages").css("color","yellow");
+		  $("#grades").css("background-color","white");
+		   $("#grades").css("color","black");
+		    $("#calendar").css("background-color","white");
+			 $("#calendar").css("color","black");
+			  $("#selector").text("messages selected: Put messages info here").height("50");
+			 
+    });
+	
+	 $("#grades").click(function(){
+        $("#grades").css("background-color","black");
+		 $("#grades").css("color","yellow");
+        $("#messages").css("background-color","white");
+		 $("#messages").css("color","black");
+		  $("#uploads").css("background-color","white");
+		   $("#uploads").css("color","black");
+		    $("#calendar").css("background-color","white");
+			 $("#calendar").css("color","black");
+			 $("#selector").text("Uploads selected: Put uploads info here").height("50");
+    });
+	
+	
+	
+	 $("#calendar").click(function(){
+	  $("#calendar").css("background-color","black");
+		 $("#calendar").css("color","yellow");
+        $("#messages").css("background-color","white");
+		 $("#messages").css("color","black");
+		  $("#grades").css("background-color","white");
+		   $("#grades").css("color","black");
+		    $("#uploads").css("background-color","white");
+			 $("#uploads").css("color","black");
+			 $("#selector").text("Uploads selected: Put uploads info here").height("50");		 
+    });
+
+	
+	
+});**/
+</script>
+	<title> 
+		ClassRoom 
+
+	</title>
+</head>
+<body>
+
+
+	<div id="welcome" >
+		<h1>
+			 Welcome to ClassMate 
+		</h1>
+	
+
+
+	</div>
+<div id="body">
+
+<div id="block"> 
+	<div id="uploads" onclick="index_redirect()" > <!-- This is what is loaded by default -->
+	
+		<h1>
+			 Uploads 
+		</h1>
+		</div>
+		
+		<div id="messages" onclick="messages_redirect()">
+		
+		<h1>
+			Messages 
+		</h1>
+		</div>
+		
+			<div id="grades" onclick="grades_redirect()">
+		
+		<h1>
+			 Grades 
+		</h1>
+		</div>
+
+		<div id="calendar" onclick="calendar_redirect()">
+		
+		<h1>
+			 Calendar 
+		</h1>
+		</div>
+		<div id="attendance" onclick="attendance_redirect()">
+		
+		<h1>
+			Attendance 
+		</h1>
+		</div>
+
+	
+</div>
+
+		<div id="selector">
+				
+			<table id="grades_table" border=1 style="border-collapse: collapse" >
+			
+			
+			<tr>
+						<th><input type="checkbox"></input> </th>
+						<th>Name </th>
+						<th>Subject</th>
+						<th>Date</th>
+						
+					</tr>
+					
+					<tr>
+						<td width="10px"><input type="checkbox"></input></td>
+						<th>Name </th>
+						<th>Subject 1</th>
+						<th>Date</th>
+						
+						
+						
+					</tr>
+					<tr>
+						<td width="10px"><input type="checkbox"></input></td>
+						<th>Student 1 </th>
+						<th>Subject 1</th>
+						<th>Date</th>
+					</tr>
+					<tr>
+						<td width="10px"><input type="checkbox"></input></td>
+						<th>Student 2 </th>
+						<th>Subject 2</th>
+						<th>Date</th>
+					</tr>
+					<tr>
+						<td width="10px"><input type="checkbox"></input></td>
+						<th>Student 3 </th>
+						<th>Subject 3</th>
+						<th>Date</th>
+					</tr>
+					<tr>
+						<td width="10px"><input type="checkbox"></input></td>
+						<th>Student 4 </th>
+						<th>Subject 4</th>
+						<th>Date</th>
+					</tr>
+			
+		</table>
+			</h1>
+	<div id="messages_buttons">
+		<button type="button">Open </button>
+		<button type="button"> Reply </button>
+		<button type="button">Delete </button>
+	</div>
+</div>
+	<div id="extra_space">
+<!-- THis elements sole purpose id to give soe professionism to the site
+		Otherwise the elements is useless....for now    -->
+		<p> 
+				testing
+		</p>
+</div>
+
+
+
+
+</body>
+</html>

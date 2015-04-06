@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="script.js"></script>
+	<script>
+	$(document).ready(function(){
+	$("#grades").css("background-color","black");
+		 $("#grades").css("color","yellow");
+		 $("#uploads").css("background-color","white");
+		 $("#uploads").css("color","black");
+		 $("#calendar").css("color","black");
+		 $("#calendar").css("background-color","white");
+		 $("#attendance").css("color","black");
+		 $("#attendance").css("background-color","white");
+		});
+    
+</script>
+	<title> 
+		ClassRoom 
+
+	</title>
+</head>
+<body>
+
+
+	<div id="welcome" >
+		<h1>
+			 Welcome to ClassMate 
+		</h1>
+	
+
+
+	</div>
+<div id="body">
+
+<div id="block"> 
+	<div id="uploads" onclick="index_redirect()" > <!-- This is what is loaded by default -->
+	
+		<h1>
+			 Uploads 
+		</h1>
+		</div>
+		
+		<div id="messages" onclick="messages_redirect()">
+		
+		<h1>
+			Messages 
+		</h1>
+		</div>
+		
+			<div id="grades" onclick="grades_redirect()">
+		
+		<h1>
+			 Grades 
+		</h1>
+		</div>
+
+		<div id="calendar" onclick="calendar_redirect()">
+		
+		<h1>
+			 Calendar 
+		</h1>
+		</div>
+		<div id="attendance" onclick="attendance_redirect()">
+		
+		<h1>
+			Attendance 
+		</h1>
+		</div>
+
+	
+</div>
+
+		<div id="selector">
+				<h1>
+			<table id="grades_table" border=1 style="border-collapse: collapse" >
+			
+			
+			<tr>
+						<th><input type="checkbox"></input> </th>
+						<th> Name</th>
+						<th>Assignment</th>
+						<th>Grade</th>
+						<th>Date</th>
+					</tr>
+					
+					<tr>
+						<td width="10px"><input type="checkbox"></input></td>
+						<td> Student 1</td>
+						<td contenteditable="true">Assignment 1</td>
+						<td contenteditable="true">95</td>
+						<td> Date</td>
+					</tr>
+					<tr>
+						<td width="10px"><input type="checkbox"></input></td>
+						<td> Student 3</td>
+						<td contenteditable="true">Assignment 1</td>
+						<td contenteditable="true">70</td>
+						<td > Date</td>
+					</tr>
+					<tr>
+						<td width="10px"><input type="checkbox"></input></td>
+						<td> Student 4</td>
+						<td contenteditable="true">Assignment 1</td>
+						<td contenteditable="true">85</td>
+						<td > Date</td>
+					</tr>
+					<tr>
+						<td width="10px"><input type="checkbox"></input></td>
+						<td> Student 5</td>
+						<td contenteditable="true">Assignment 1</td>
+						<td contenteditable="true">60</td>
+						<td> Date</td>
+					</tr>
+			
+		</table>
+			</h1>
+				
+				
+				
+			<!--<h1>			
+			<table id="message_table">
+			
+			<tr> 
+				<th> </th>
+				<th> Name </th>
+				<th> Assignment </th>
+				<th> Grade</th>
+				<th> Date </th>
+			</tr>
+			<tr>
+				<td> Student 1 </td>
+				<td> James </td>
+				<td> Assignmnet 1 </td>
+				<td> A</td>
+				<td>  Date </td>
+				
+			</tr>
+			<tr>
+				<td> Student 2 </td>
+				<td> John</td>
+				<td> Assignmnet 1 </td>
+				<td> B</td>
+				<td> Date </td>
+				
+			</tr>
+			<tr>
+				<td> Student 3 </td>
+				<td> Jane </td>
+				<td> Assignmnet 1 </td>
+				<td> B</td>
+				<td> Date </td>
+				
+			</tr>
+			<tr>
+				<td> Student 4 </td>
+				<td> Michael </td>
+				<td> Assignmnet 1 </td>
+				<td> C</td>
+				<td> Date </td>
+				
+			</tr>
+			
+			
+			
+			</table>
+			</h1>-->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	<div id="grades_buttons">
+		<button type="button"> Add</button>
+		<button type="button"> Edit </button>
+		
+	</div>
+</div>
+	<div id="extra_space">
+<!-- THis elements sole purpose id to give soe professionism to the site
+		Otherwise the elements is useless....for now    -->
+		<p> 
+				testing
+		</p>
+</div>
+
+
+
+
+</body>
+</html>

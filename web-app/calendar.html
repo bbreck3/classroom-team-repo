@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="script.js"></script>
+	<script>
+	$(document).ready(function(){
+	$("#calendar").css("background-color","black");
+		 $("#calendar").css("color","yellow");
+		 $("#uploads").css("background-color","white");
+		 $("#uploads").css("color","black");
+		 $("#grades").css("background-color","white");
+		 $("#grades").css("color","black");
+		
+		 $("#calendar").css("background-color","black");
+		 $("#attendance").css("color","black");
+		 $("#attendance").css("background-color","white");
+	
+	});
+    
+</script>
+	<title> 
+		ClassRoom 
+
+	</title>
+</head>
+<body>
+
+
+	<div id="welcome" >
+		<h1>
+			 Welcome to ClassMate 
+		</h1>
+	
+
+
+	</div>
+<div id="body">
+
+<div id="block"> 
+	<div id="uploads" onclick="index_redirect()"> <!-- This is what is loaded by default -->
+	
+		<h1>
+			 Uploads 
+		</h1>
+		</div>
+		
+		<div id="messages" onclick="messages_redirect()">
+		
+		<h1>
+			Messages 
+		</h1>
+		</div>
+		
+			<div id="grades" onclick="grades_redirect()">
+		
+		<h1>
+			 Grades 
+		</h1>
+		</div>
+
+		<div id="calendar" onclick="calendar_redirect()">
+		
+		<h1>
+			 Calendar 
+		</h1>
+		</div>
+		<div id="attendance" onclick="attendance_redirect()">
+		
+		<h1>
+			 Attendance 
+		</h1>
+		</div>
+
+	
+</div>
+
+		<div id="selector">
+				
+			<h1>
+			<table id="grades_table" border=1 style="border-collapse: collapse" >
+			
+			
+			<tr>
+						<th><input type="checkbox"></input> </th>
+						<th> </th>
+						<th> Monday</th>
+						<th>Tuesday</th>
+						<th>Wednesday</th>
+						<th>Thursday</th>
+						<th>Friday</th>
+					</tr>
+					
+					<tr>
+						<td width="10px"><input type="checkbox"></input></td>
+						<td> Time</td>
+						<td contenteditable="true"> Class</td>
+						<td contenteditable="true">Office Hours</td>
+						<td contenteditable="true"> Class</td>
+						<td contenteditable="true">Office Hours</td>
+						<td contenteditable="true"> Class</td>
+						
+						
+					</tr>
+					<tr>
+						<td width="10px"><input type="checkbox"></input></td>
+						<td> Time</td>
+						<td contenteditable="true"> Class</td>
+						<td contenteditable="true">Office Hours</td>
+						<td contenteditable="true"> Class</td>
+						<td contenteditable="true">Office Hours</td>
+						<td contenteditable="true"> Class</td>
+					</tr>
+					<tr>
+						<td width="10px"><input type="checkbox"></input></td>
+						<td> Time</td>
+						<td contenteditable="true"> Class</td>
+						<td contenteditable="true">Office Hours</td>
+						<td contenteditable="true"> Class</td>
+						<td contenteditable="true">Office Hours</td>
+						<td contenteditable="true"> Class</td>
+					</tr>
+					<tr>
+						<td width="10px"><input type="checkbox"></input></td>
+						<td> Time</td>
+						<td contenteditable="true"> Class</td>
+						<td contenteditable="true">Office Hours</td>
+						<td contenteditable="true"> Class</td>
+						<td contenteditable="true">Office Hours</td>
+						<td contenteditable="true"> Class</td>
+					</tr>
+					<tr>
+						<td width="10px"><input type="checkbox"></input></td>
+						<td> Time</td>
+						<td contenteditable="true"> Class</td>
+						<td contenteditable="true">Office Hours</td>
+						<td contenteditable="true"> Class</td>
+						<td contenteditable="true">Office Hours</td>
+						<td contenteditable="true"> Class</td>
+					</tr>
+			
+		</table>
+			</h1>
+	<select id="interval">
+	<option value="Day">Day</option>
+	<option value="Week">Week</option>
+	<option value="Month">Month</option>
+	
+	</select>
+
+		<div id="calendar_buttons">
+		<button type="button"> Add</button>
+		<button type="button"> Edit </button>
+		</div>
+	</div>
+</div>
+	<div id="extra_space">
+<!-- THis elements sole purpose id to give soe professionism to the site
+		Otherwise the elements is useless....for now    -->
+		<p> 
+				testing
+		</p>
+</div>
+
+
+
+
+</body>
+</html>
