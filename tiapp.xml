@@ -14,13 +14,12 @@
     <guid>eec2ef3d-7846-4146-9fd4-c8e6e435b0ac</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <property name="acs-api-key-development" type="string">mxF5SQIcBJXgBI1cNRBpVJvI718N5gge</property>
-	<property name="acs-oauth-key-development" type="string">YOUR DEVELOPMENT OAUTH KEY HERE</property>
-	<property name="acs-oauth-secret-development" type="string">YOUR DEVELOPMENT OAUTH SECRET HERE</property>
-
-	<property name="acs-api-key-production" type="string">YOUR PRODUCTION API KEY HERE</property>
-	<property name="acs-oauth-key-production" type="string">YOUR PRODUCTION OAUTH KEY HERE</property>
-	<property name="acs-oauth-secret-production" type="string">YOUR PRODUCTION OAUTH SECRET HERE</property>
-	    <ios>
+    <property name="acs-oauth-key-development" type="string">YOUR DEVELOPMENT OAUTH KEY HERE</property>
+    <property name="acs-oauth-secret-development" type="string">YOUR DEVELOPMENT OAUTH SECRET HERE</property>
+    <property name="acs-api-key-production" type="string">YOUR PRODUCTION API KEY HERE</property>
+    <property name="acs-oauth-key-production" type="string">YOUR PRODUCTION OAUTH KEY HERE</property>
+    <property name="acs-oauth-secret-production" type="string">YOUR PRODUCTION OAUTH SECRET HERE</property>
+    <ios>
         <plist>
             <dict>
                 <key>UISupportedInterfaceOrientations~iphone</key>
@@ -64,7 +63,7 @@
         <target device="blackberry">false</target>
         <target device="mobileweb">true</target>
     </deployment-targets>
-    <sdk-version>3.5.0.GA</sdk-version>
+    <sdk-version>3.5.1.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
