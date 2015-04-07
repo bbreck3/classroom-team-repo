@@ -45,8 +45,34 @@ $.course4.addEventListener('click', function() {
 function login(course){
 	alert('Login Successful!');
 };
+var dash = Ti.UI.createWindow({
+  id : 'dash',
+});
+var announce =[
+'CMSC 491: Class is Cancelled 5/2', 
+'CMSC 521: Due date extended for project', 
+'CMSC 491: Final Exam review is tomorrow',
+'CMSC 256: Notes from last class have been posted'
+];
+var scrollView = Titanium.UI.createScrollView({
+    contentWidth:'300',
+    contentHeight:'2000',
+    top:0,
+    showVerticalScrollIndicator:true,
+    showHorizontalScrollIndicator:true,
+    id : 'scrollView',
+});
 
-
+for (a = 0; a<announce.length;a++){
+	var lab1 = Titanium.UI.createLabel({
+		text : announce[a],
+		 });
+		scrollView.add(lab1);
+	
+	}
+	//dash.add(scrollAnnounce);
+	
+	
 
 
 

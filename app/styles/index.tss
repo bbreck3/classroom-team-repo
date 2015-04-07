@@ -567,6 +567,13 @@ right:5,
 	right :"1%",
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
 }
+".listitem" : {
+	color: "#767676",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	top :"4px",
+	width : "95%",
+	
+}
 
 
 
