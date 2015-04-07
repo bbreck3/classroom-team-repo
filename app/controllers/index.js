@@ -54,21 +54,13 @@ var announce =[
 'CMSC 491: Final Exam review is tomorrow',
 'CMSC 256: Notes from last class have been posted'
 ];
-var scrollView = Titanium.UI.createScrollView({
-    contentWidth:'300',
-    contentHeight:'2000',
-    top:0,
-    showVerticalScrollIndicator:true,
-    showHorizontalScrollIndicator:true,
-    id : 'scrollView',
-});
-
 for (a = 0; a<announce.length;a++){
 	var lab1 = Titanium.UI.createLabel({
 		text : announce[a],
 		 });
-		scrollView.add(lab1);
-	
+		$.scrollView.add(lab1);
+		
+	//add acrollvew dynamcally here
 	}
 	//dash.add(scrollAnnounce);
 	
