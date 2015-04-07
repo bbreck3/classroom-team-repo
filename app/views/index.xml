@@ -17,12 +17,29 @@
 			<View id="split">
 				<View id="announce" class="splitcontainer">
 					<Label color="black" shadowColor="#aaa" text="Announcements" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" />
+					<ScrollView id="scrollView" layout= "vertical" showVerticalScrollIndicator="true">
+						<Label  text="■ CMSC 491: Class is Cancelled 5/2" class = "listitem"></Label>
+						<Label  text="■ CMSC 521: Due date extended for project" class = "listitem"></Label>
+						<Label  text="■ CMSC 491: Final Exam review is tomorrow" class = "listitem" ></Label>
+						<Label text="■ CMSC 256: Notes from last class have been posted" class = "listitem" ></Label>
+						<Label  text="■ CMSC 491: Class is Cancelled 5/2" class = "listitem" ></Label>
+						<Label  text="■ CMSC 521: Due date extended for project" class = "listitem"></Label>
+						
+					</ScrollView>
+					
 				
 				</View>
 				
 				<View id="due" class="splitcontainer">
 					<Label color="black" shadowColor="#aaa" text="Due Dates" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" />
-				
+				<ScrollView id="scrollView" layout= "vertical" showVerticalScrollIndicator="true">
+						<Label  text="■ CMSC 491: Assignment Due 5/2" class = "listitem"></Label>
+						<Label  text="■ CMSC 521: Project 5 Due 5/6" class = "listitem"></Label>
+						<Label  text="■ CMSC 491: Homework #2 due 5/7" class = "listitem" ></Label>
+						
+						
+					</ScrollView>
+					
 				</View>
 				
 			</View>			
