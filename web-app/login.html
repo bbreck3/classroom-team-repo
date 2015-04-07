@@ -5,52 +5,10 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script scr="script.js"></script>
 	<script>
-	$(document).ready(function(){
-	<!-- if Uploads clicked the the rest changes
-    $("#uploads").click(function(){
-        $("#messages").css("background-color","white");
-		 $("#messages").css("color","black");
-		  $("#grades").css("background-color","white");
-		   $("#grades").css("color","black");
-		    $("#calendar").css("background-color","white");
-			 $("#calendar").css("color","black");
-			 
-    });
 	
-	 $("#messages").click(function(){
-	 
-		$("#uploads").css("background-color","white");
-		 $("#uploads").css("color","black");
-		  $("#grades").css("background-color","white");
-		   $("#grades").css("color","black");
-		    $("#calendar").css("background-color","white");
-			 $("#calendar").css("color","black");
-			 
-    });
-	
-	 $("#grades").click(function(){
-        $("#messages").css("background-color","white");
-		 $("#messages").css("color","black");
-		  $("uploads").css("background-color","white");
-		   $("#uploads").css("color","black");
-		    $("#calendar").css("background-color","white");
-			 $("#calendar").css("color","black");
-			 
-    });
-	
-	 $("#calendar").click(function(){
-        $("#messages").css("background-color","white");
-		 $("#messages").css("color","black");
-		  $("#grades").css("background-color","white");
-		   $("#grades").css("color","black");
-		    $("#uploads").css("background-color","white");
-			 $("#uploads").css("color","black");
-			 
-    });
-});
 </script>
 	<title> 
-		ClassRoom 
+		ClassMate 
 
 	</title>
 </head>
@@ -59,7 +17,7 @@
 
 	<div id="welcome" >
 		<h1>
-			 Welcome to Class 
+			 Welcome to ClassMate
 		</h1>
 		<h3>
 			 Please login to continue 
@@ -68,20 +26,26 @@
 
 	</div>
 <div id="body">
-	<form id="form_login">
+	<form id="form_login" action="index.html">
 		<div id="username">
 		Username: <input type="text" name="username"> </br>
 		</div>
 		<div id="password">
 		Password: &nbsp;<input type="password" name="password"> </br>
 		 
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="reset" type="text"> Reset </button> &nbsp;&nbsp;<button id="submit" type="submit">Login</button>
+		
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="login" type="password" href="index.html"> Login </button></a>
+		<!--<button id="reset" type="text" > Reset </button> &nbsp;&nbsp;-->
 	</div>
 	</form>
+	
 </div>
 
 <div id="extra_space">
-<!-- THis elements sole purpose id to give soe professionism to the site
+<!-- THis elements sole purpose id to give some professionalism to the site
 		Otherwise the elements is useless....for now    -->
 		<p> 
 				testing

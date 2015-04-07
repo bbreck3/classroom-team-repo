@@ -9,7 +9,18 @@
 
 /* Style elements for the intial screen after login */
 
-
+#uploads_list{
+	text-align:left;
+	
+}
+#docs{
+	background-color:white;
+	color:black;
+}
+#lecs{
+	background-color:white;
+	color:black;
+}
 #uploads{
 	background-color:black;
 	text-align:center;
@@ -55,8 +66,28 @@
 }
 
 #messages{
-	background-color:red;
-	text-align:center;
+	background-color:white;
+	
+	color:black;
+
+	width:20%;
+	margin-left:50px;
+	
+
+	padding-top: 1px;
+    padding-right: 70px;
+    padding-bottom: 1px;
+    padding-left: 40px;
+	padding-right:100px;
+	
+	
+	
+		
+}
+
+#attendance{
+	background-color:black;
+	
 	color:yellow;
 
 	width:20%;
@@ -72,6 +103,76 @@
 	
 	
 		
+}
+
+#grades_table{
+	background-color: white;
+	color:black;
+	
+	
+	width:80%;
+	margin-left:auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	
+	
+
+}
+
+#grades_buttons{
+	align:left;
+	margin-right:65px;
+}
+#messages_buttons{
+	align:left;
+	margin-right:65px;
+}
+#calendar_buttons{
+	align:left;
+	margin-right:65px;
+}
+
+#uploads_buttons{
+	align:left;
+	margin-right:65px;
+}
+
+
+#interval{
+	margin-top:1px;
+	
+}
+#present{
+	background-color: white;
+	color:black;
+	text-align:left;
+	margin-left:auto;
+	margin-right:auto;
+	width:90%;
+	
+
+}
+
+#absent{
+	background-color: white;
+	text-align:left;
+	color:black;
+	margin-left:auto;
+	margin-right:auto;
+	width:90%;
+	
+
+}
+
+#refresh_button{
+	align:left;
+	margin-right:10px;
+}
+#grades_table{
+	background-color: white;
+	color:black;
+	
+
 }
 
 #calendar{
@@ -96,8 +197,7 @@
 }
 
 #selector{
-	background-color:green;
-	text-align:left;
+	background-color:black;
 	color:blue;
 	
 	margin-top:30px;
@@ -116,12 +216,28 @@
 		
 }
 
+
+/* The table containing the student and instructor login fields */
+.table{
+	background-color:white; /*#E6E3CC;*/
+	padding:1px;
+	width:95%;
+	margin-left:auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	color: black;
+}
+th,tr,td{
+	text-align:left;
+	
+}
+
 #body{
 padding-bottom: 1px;
 	padding-top: 1px;
 	padding-top: 1px;
     padding-right: 1px;
-    padding-bottom: 40px;
+    padding-bottom: 1px;
     padding-left: 1px;
 	background-color:yellow;
 	text-align:right;
@@ -146,7 +262,8 @@ margin-left:100px;
 
 #login_form{
 	background-color:white;
-	padding-top:1px;
+	padding-top:10px;
+	padding-bottom:10px;
 	
 }
 
@@ -154,10 +271,10 @@ margin-left:100px;
 	background-color: black;
 	color: yellow;
 	text-align:center;
-	width:60%;
-	padding-top:1px;
-	margin-left:20%;
-	margin-right:20%;
+	width:14%;
+	margin-left:40%;
+	margin-right:40%;
+	padding-bottom:1px;
 	
 }
 
@@ -165,9 +282,9 @@ margin-left:100px;
 	background-color: black;
 	color: yellow;
 	text-align:center;
-	width:60%;
-	margin-left:20%;
-	margin-right:20%;
+	width:14%;
+	margin-left:40%;
+	margin-right:40%;
 }
 
 
@@ -181,4 +298,9 @@ padding-top:5px;
 text-align:center;
 
 }
+#scroller { list-style: none; padding: 1em;
+    border: 1px solid #9DB029; margin: 1em 0; }
+
+#scroller li { border: 1px solid #ddd; width: 8em;
+    margin: 0.25em; padding: 0.5em; background-color: #eee; }
 

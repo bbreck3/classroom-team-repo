@@ -3,78 +3,24 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script scr="script.js"></script>
+	<script src="script.js"></script>
 	<script>
 	$(document).ready(function(){
-	$("#uploads").css("background-color","black");
+	$("#attendance").css("background-color","white");
+		 $("#attendance").css("color","black");
+		 $("#uploads").css("background-color","black");
 		 $("#uploads").css("color","yellow");
-		 $("#messages").css("background-color","black");
-		 $("#messages").css("color","yellow");
-		 $("#grades").css("background-color","black");
-		 $("#grades").css("color","yellow");
-		 $("#calendar").css("background-color","black");
-		 $("#calendar").css("color","yellow");
+		 $("#grades").css("background-color","white");
+		 $("#grades").css("color","black");
+		 $("#calendar").css("color","black");
+		 $("#calendar").css("background-color","white");
+		
+		
+	});
 	
-	<!-- if Uploads clicked the the rest changes
-    $("#uploads").click(function(){
-	 $("#uploads").css("background-color","black");
-		 $("#uploads").css("color","yellow");
-        $("#messages").css("background-color","white");
-		 $("#messages").css("color","black");
-		  $("#grades").css("background-color","white");
-		   $("#grades").css("color","black");
-		    $("#calendar").css("background-color","white");
-			 $("#calendar").css("color","black");
-			 $("#selector").text("Uploads selected: Put uploads info here").height("50");
-    });
-	
-	
-	 $("#messages").click(function(){
-	 
-		$("#uploads").css("background-color","white");
-		 $("#uploads").css("color","black");
-		 $("#messages").css("background-color","black");
-		 $("#messages").css("color","yellow");
-		  $("#grades").css("background-color","white");
-		   $("#grades").css("color","black");
-		    $("#calendar").css("background-color","white");
-			 $("#calendar").css("color","black");
-			  $("#selector").text("messages selected: Put messages info here").height("50");
-			 
-    });
-	
-	 $("#grades").click(function(){
-        $("#grades").css("background-color","black");
-		 $("#grades").css("color","yellow");
-        $("#messages").css("background-color","white");
-		 $("#messages").css("color","black");
-		  $("#uploads").css("background-color","white");
-		   $("#uploads").css("color","black");
-		    $("#calendar").css("background-color","white");
-			 $("#calendar").css("color","black");
-			 $("#selector").text("Uploads selected: Put uploads info here").height("50");
-    });
-	
-	
-	
-	 $("#calendar").click(function(){
-	  $("#calendar").css("background-color","black");
-		 $("#calendar").css("color","yellow");
-        $("#messages").css("background-color","white");
-		 $("#messages").css("color","black");
-		  $("#grades").css("background-color","white");
-		   $("#grades").css("color","black");
-		    $("#uploads").css("background-color","white");
-			 $("#uploads").css("color","black");
-			 $("#selector").text("Uploads selected: Put uploads info here").height("50");		 
-    });
-
-	
-	
-});
 </script>
 	<title> 
-		ClassRoom 
+		ClassMate 
 
 	</title>
 </head>
@@ -83,7 +29,7 @@
 
 	<div id="welcome" >
 		<h1>
-			 Welcome to Class 
+			 Welcome to ClassMate
 		</h1>
 	
 
@@ -92,31 +38,37 @@
 <div id="body">
 
 <div id="block"> 
-	<div id="uploads"> <!--onclick="changeColor(this);"> -->
+	<div id="uploads" onclick="index_redirect()"> <!-- This is what is loaded by default -->
 	
 		<h1>
 			 Uploads 
 		</h1>
 		</div>
 		
-			<div id="messages">
+		<div id="messages" onclick="messages_redirect()">
 		
 		<h1>
 			Messages 
 		</h1>
 		</div>
 		
-			<div id="grades">
+			<div id="grades" onclick="grades_redirect()">
 		
 		<h1>
 			 Grades 
 		</h1>
 		</div>
 
-				<div id="calendar">
+		<div id="calendar" onclick="calendar_redirect()">
 		
 		<h1>
 			 Calendar 
+		</h1>
+		</div>
+		<div id="attendance" onclick="attendance_redirect()">
+		
+		<h1>
+			 Attendance 
 		</h1>
 		</div>
 
@@ -125,9 +77,49 @@
 
 		<div id="selector">
 			
-		<h1>
-			Put stuff here 
+		<div id="uploads_list">
+		<h1>	
+				<B style="background-color:black; color:yellow;">Select an Document:</B> <BR>
+				<SELECT NAME="docs" SIZE="10" width="300" style="width: 280px" MULTIPLE >
+				<OPTION SELECTED> Doc 1
+				<OPTION> Doc 1
+				<OPTION> Doc 3
+				<OPTION> Doc 4
+				<OPTION> Doc 5
+				<OPTION> Doc 6
+				<OPTION> Doc 7
+				<OPTION> Doc 8
+				<OPTION> Doc 9
+				<OPTION> Doc 10
+				
+				</SELECT>
+				
 		</h1>
+		<h1>
+			
+			<B style="background-color:black; color:yellow; width:100px;">Select a Lecture:</B> <BR>
+				<SELECT NAME="lec" SIZE="10"  width="300" style="width: 230px" MULTIPLE >
+				<OPTION SELECTED> Lec 1
+				<OPTION> Lec 1
+				<OPTION> Lec 2
+				<OPTION> Lec 3
+				<OPTION> Lec 4
+				<OPTION> Lec 5
+				<OPTION> Lec 6
+				<OPTION> Lec 7
+				<OPTION> Lec 8
+				<OPTION> Lec 9
+				<OPTION> Lec 10
+				</SELECT>
+			
+			
+		</h1>
+	</div>
+	
+		<div id="uploads_buttons">
+		<button type="button"> Upload </button>
+		<button type="button"> Download </button>
+		</div>
 
 	</div>
 </div>
