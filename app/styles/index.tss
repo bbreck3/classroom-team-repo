@@ -572,6 +572,11 @@ right:5,
 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
 	top :"4px",
 	width : "95%",
+	font: {fontSize:12	}
+	
+}
+".sview" : {
+	
 	
 }
 

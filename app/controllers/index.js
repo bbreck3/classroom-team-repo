@@ -54,17 +54,40 @@ var announce =[
 'CMSC 491: Final Exam review is tomorrow',
 'CMSC 256: Notes from last class have been posted'
 ];
+var duedates =[
+'CMSC 491: Assignment Due 5/2"', 
+'CMSC 521: Individual Project 5 Due 5/6', 
+'CMSC 491: Homework #2 due 5/7',
+'CMSC 521: Group Project Report Due 5/6', 
+];
+for (b = 0; b<3;b++){
+	
+
 for (a = 0; a<announce.length;a++){
+	var ltxt = "■ " + announce[a];
 	var lab1 = Titanium.UI.createLabel({
-		text : announce[a],
+		text : ltxt,
+		class : "listitem",
 		 });
-		$.scrollView.add(lab1);
+		$.addClass(lab1,"listitem");
+		$.scrollView1.add(lab1);
 		
 	//add acrollvew dynamcally here
 	}
 	//dash.add(scrollAnnounce);
+for (a = 0; a<duedates.length;a++){
 	
-	
+	var ltxt = "■ " + duedates[a];
+	var lab1 = Titanium.UI.createLabel({
+		text : ltxt,
+		class : "listitem",
+		 });
+		$.addClass(lab1,"listitem");
+		$.scrollView2.add(lab1);
+		
+	//add acrollvew dynamcally here
+	}	
+}	
 
 
 
