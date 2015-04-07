@@ -1,4 +1,81 @@
 
-".container" : {
+"#container" : {
+	backgroundColor: 'white',
+	layout: 'vertical',
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL
+    //backgroundColor : "#dadada"
   
 }
+"#coursename" : {
+	backgroundColor: 'white',
+	color : '#797979',
+	width : "70%",
+	height: "80%",
+	left: "10%",
+	font: {fontSize:'60px',fontFamily:'Helvetica',fontWeight:'bold',fontColor:'#797979'},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	shadowColor : "#aaa"
+  
+}
+"#coursegrade" : {
+	backgroundColor: '#328332',
+	color : 'white',
+	width : "18%",
+	right : "2%",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	height: Ti.UI.FILL,
+	borderRadius:10,
+	font: {fontSize:'32px'}
+  
+}
+"#courseheader" : {
+	top : "12px",
+	height: "100px",
+	width: Ti.UI.FILL,
+	layout: 'horizontal'
+  
+}
+
+
+".sublist" : {
+	//borderWidth : 20,	
+  indentionLevel: '10',	
+  left : "20px",
+  width : "90%",
+  touchEnabled: true,
+            height: '110px',
+            
+            color : 'white',
+            font:{fontSize:18,}
+}
+"#selectlist" : {
+	
+		//editable: true,
+		width : '97%',
+       // /left : 10,
+        moveable:false,
+        moving:false,
+        height:Ti.UI.FILL,
+        backgroundColor: '#797979',
+        separatorColor: 'white',
+        borderRadius:10,
+        borderColor: 'transparent',
+        //backgroundImage:'http://drawingacademy.com/wp-content/uploads/pencil-hatching-gradient-drawing-academy.jpg', //change this to your gradient and make you row size the same mines on s3fileshare
+        backgroundRepeat:true,
+        footerTitle:''//removes the empty rows ...
+}
+"#grades" :{
+	leftImage:'/images/star.png'
+}
+"#assignments" :{
+	leftImage:'/images/note.png'
+}
+"#lecture" :{
+	leftImage:'/images/bubble.png'
+}
+"#collaboration" :{
+	leftImage:'/images/user.png'
+}
+	
+
