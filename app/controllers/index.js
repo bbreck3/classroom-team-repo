@@ -18,7 +18,7 @@ var win=Alloy.createController('login').getView();
 
 
 
-$.course1.addEventListener('longpress', function() {  // <-- once the user is logged in from the login screen, is it really neccessary to log them in again?
+$.course1.addEventListener('click', function() {  // <-- once the user is logged in from the login screen, is it really neccessary to log them in again?
 	login('course1');
 });
 $.course1.addEventListener('click', function() {

@@ -5,7 +5,7 @@
 		<View id="container">
 		
 		
-		<Label id="select" color="white" text="Click to Select a Course, Hold to Login" backgroundColor="black" ></Label>
+		<Label id="select" color="white" text="Click to Select a Course" backgroundColor="black" ></Label>
 		
 			<!-- Course Selection: Images that once click redirect to that specific course and its cub components -->
 			<View id="classes">

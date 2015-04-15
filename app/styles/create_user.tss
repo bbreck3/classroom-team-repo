@@ -1,0 +1,97 @@
+
+"#remember" :{
+	style: Ti.UI.Android.SWITCH_STYLE_CHECKBOX,
+	title:'Remember me',
+}
+ "#ucon": {
+ 	top :10,
+    layout: 'horizontal',
+    width: Ti.UI.FILL,
+    height: '7%',
+    
+}
+"#pcon": {
+	height: '7%',
+    layout: 'horizontal',
+    width: Ti.UI.FILL,
+    
+}
+"#btnCreate_User" : {
+  width : "100%"
+}
+"#btnSave" : {
+	
+
+  
+}
+"#logo" : {
+	top:20
+
+  
+}
+"#label1" : {
+	
+width : "25%",
+textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+  
+}
+"#label2" : {
+	
+	width : "25%",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+  
+}
+"#label3" : {
+	top : 20,
+	height : "7%",
+  
+}
+"#label4" : {
+	
+	height : "7%",
+  
+}
+"#email" : {
+  
+}
+"#contain" : {
+ 	layout: 'vertical',
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL,
+     
+    
+}
+"#login" : {
+	
+ backgroundColor: '#797979',
+ fullscreen: false,
+    orientationModes: [
+		Ti.UI.PORTRAIT]
+   
+}
+"#c_password" : {
+	width : "75%",
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_LINE,
+	passwordMask:true
+  
+}
+"#c_username" : {
+	width : "75%",
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_LINE
+  
+}
+".container" : {
+	top: Alloy.Globals.top,
+	height: "50dp",
+	width: Ti.UI.FILL,
+	backgroundGradient: {
+		type: "linear",
+		startPoint: { x: "0%", y:"0%"},
+		endPoint:   { x: "0%", y:"100%"},
+		colors: [
+			{ color: "#a00", offset: 0.0 },
+			{ color: "#800", offset: 1.0 }
+		]
+	}
+}
+  
