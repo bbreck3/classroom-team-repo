@@ -9,10 +9,10 @@
 		
 			<!-- Course Selection: Images that once click redirect to that specific course and its cub components -->
 			<View id="classes">
-			<Button title="course1" id="course1" class="classbox"/>
+			<!-- <Button title="course1" id="course1" class="classbox"/>
 			<Button title="course2" id="course2" class="classbox"/> 
 			<Button title="course3" id="course3" class="classbox"/> 
-			<Button title="course4" id="course4" class="classbox"/>  
+			<Button title="course4" id="course4" class="classbox"/>  --> 
 			</View>
 			<View id="split">
 				<View id="announce" class="splitcontainer">

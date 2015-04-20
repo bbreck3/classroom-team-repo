@@ -2,7 +2,7 @@
 	<Window id="classes"> 
 		<View id = "container" layout='vertical'>
 		<View id = "courseheader" >	
-		<Label id="coursename" color="black" text="CMSC 491" backgroundColor="white" ></Label>
+		<Label id="coursename" text = '?' color="black" backgroundColor="white" ></Label>
 		<Label id="coursegrade"  text="82.9%" ></Label>
 		</View>	
 		<TableView id='selectlist' top="20">

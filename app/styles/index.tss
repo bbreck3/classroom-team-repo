@@ -34,21 +34,21 @@
  * 	All Div elements bellow
  * 
  */
-"#course1":{
+".course0":{
 	backgroundColor : "#07b80a"
 	
 }
 
-"#course2":{
+".course1":{
 	backgroundColor : "#42b3ea"
 
 },
-"#course3":{
+".course2":{
 	backgroundColor : "#ff0000"
 
 	
 }
-"#course4":{
+".course3":{
 	backgroundColor : "#f6cc1a"
 
 	

@@ -1,4 +1,4 @@
-
+var Cloud = require('ti.cloud');
 function doClick(e) {
     alert($.label.text);
 }
@@ -12,34 +12,143 @@ function doClick(e) {
  */
 
 
-var win=Alloy.createController('login').getView();
+ Cloud.Users.showMe(function (e) {
+    if (e.success) {
+        var user = e.users[0];
+        alert('Success:\n' +
+            'idAA: ' + user.id);
+            Ti.App.username = user.username;
+             // classList = user.subscribed;
+//              
+            // for (a = 0; a<classList.length;a++){
+            	// var x = classList[a];
+            	// genBox(x);
+            	// } 
+            //genBox(classList[a],'Cmsc');
+    } else {
+        //alert('Error:\n' +
+            //((e.error && e.message) || JSON.stringify(e)));
+            Ti.App.username = '';
+            var win=Alloy.createController('login').getView();
  win.open();
-
-
-
-
-$.course1.addEventListener('click', function() {  // <-- once the user is logged in from the login screen, is it really neccessary to log them in again?
-	login('course1');
+    }
 });
-$.course1.addEventListener('click', function() {
+
+function genBox(name, cid, i){
+	//alert(cid +' genbox' + i);
+	
+	var colorID = 'course'  + i; 
+	//alert('colderid' + colorID);
+	var button = $.UI.create('Button',{
+   		title: name,
+   		classes : ['classbox',colorID]
+   		
+
+});
+button.addEventListener('click', function() {
+	Ti.App.cur_cid = cid;
+ 	Ti.App.cur_name = name;
+	
 	var win=Alloy.createController('classes').getView();
+ 	win.cid = cid;
+ 	
  	win.open();
 });
 
-$.course2.addEventListener('click', function() {
-	var win=Alloy.createController('classes').getView();
- 	win.open();
+
+$.classes.add(button);
+}
+var classList = new Array();
+function getNames(cid,i){
+	//alert(cid +': getnames cid')
+	Cloud.Objects.query({
+	
+        classname : 'classes',
+ 		where: {classID :cid}   
+		}, function(f){
+			if(f.success){
+			var cname = f.classes[0];
+			//alert('cname'+cname.name);
+			genBox(cname.name, cid,i);
+	} else{
+			alert('Error: ' + f.error + f.message);
+	}
+});;
+}
+Cloud.debug = true;	
+Cloud.Objects.query({
+	
+        classname : 'subsTo',
+ where: {studentname:Ti.App.username}   
+}, function(e){
+	if(e.success){
+		for (i = 0; i < e.subsTo.length;i++ ){
+			var cid = e.subsTo[i];
+			getNames(cid.classID,i);
+		}
+		
+	classes = e.name;
+	//alert('asdf'+e.subsTo.length);
+	} else{
+		alert('Error: ' + e.error + e.message);
+	}
+	
 });
 
-$.course3.addEventListener('click', function() {
-	var win=Alloy.createController('classes').getView();
- 	win.open();
-});
 
-$.course4.addEventListener('click', function() {
-	var win=Alloy.createController('classes').getView();
- 	win.open();
-});
+
+// var checkUser = Ti.App.Properties.getString('id', false);
+// if (checkUser == false){
+// var win=Alloy.createController('login').getView();
+ // win.open();
+// }
+// else{
+	// Cloud.Users.show({
+    // id: Ti.App.Properties.getString('id')
+// }, function (e) {
+	// if (e.success) {
+        // var user = e.users[0];
+        // alert('1111Success:\n' +
+            // 'id: ' + user.id + '\n' +
+            // 'first name: ' + user.username + '\n' +
+            // 'last name: ' + user.subscribed);
+            // classList = user.subscribed;
+            // for (a = 0; a<classList.length;a++){
+//             	
+            	// genBox(classList[a],'Cmsc');
+            	// } 
+    // } else {
+        // alert('Error:\n' +
+            // ((e.error && e.message) || JSON.stringify(e)));
+    // }
+// });
+// }
+
+
+
+
+// $.course1.addEventListener('click', function() {  // <-- once the user is logged in from the login screen, is it really neccessary to log them in again?
+	// login('course1');
+// });
+// $.course1.addEventListener('click', function() {
+	// var win=Alloy.createController('classes').getView();
+ 	// win.open();
+// });
+// 
+// $.course2.addEventListener('click', function() {
+	// var win=Alloy.createController('classes').getView();
+ 	// win.open();
+// });
+// 
+// $.course3.addEventListener('click', function() {
+	// var win=Alloy.createController('classes').getView();
+ 	// win.open();
+// });
+// 
+// $.course4.addEventListener('click', function() {
+	// var win=Alloy.createController('classes').getView();
+ 	// win.open();
+// });
 
 
 function login(course){

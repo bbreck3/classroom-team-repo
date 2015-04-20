@@ -36,7 +36,11 @@ function createUser(e){
 Cloud.Users.create({
 	username: $.c_username.value,
 	password: $.c_password.value,
-	password_confirmation: $.c_password.value
+	password_confirmation: $.c_password.value,
+	custom_fields:{
+		subscribed: ['1','2']
+	}
+	
 	}, function (e) {
 	    if (e.success) {
 	        var user = e.users[0];
@@ -45,6 +49,7 @@ Cloud.Users.create({
             'sessionId: ' + Cloud.sessionId + '\n' +
             'username: ' + user.username + '\n'
             );
+            Ti.App.username = user.username;
 	        var dash=Alloy.createController('index').getView();
     	Alloy.Globals.dash = $.dash;
 		dash.open();

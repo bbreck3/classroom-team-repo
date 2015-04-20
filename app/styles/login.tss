@@ -1,6 +1,6 @@
 
 "#remember" :{
-	style: Ti.UI.Android.SWITCH_STYLE_CHECKBOX,
+	//style: Ti.UI.Android.SWITCH_STYLE_CHECKBOX,
 	title:'Remember me',
 }
  "#ucon": {

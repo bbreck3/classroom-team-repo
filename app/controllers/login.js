@@ -15,7 +15,9 @@ function checkLogin(e){
             'sessionId: ' + Cloud.sessionId + '\n' +
             'user name: ' + user.username + '\n' +
             'password: ' + user.password);
+            Ti.App.username = user.username;
             var dash=Alloy.createController('index').getView();
+            Ti.App.Properties.setString('id', user.id);
     	Alloy.Globals.dash = $.dash;
 		dash.open();
     } else {
