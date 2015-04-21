@@ -1,8 +1,11 @@
 <Alloy>
 	<Window id="instructor">
 	<View class="container">
-		<Label id="test" text="Welcome instructor" color="white"  backgroundColor="black" > </Label>
+		<Label id="welcome" text="Welcome instructor" color="white"  backgroundColor="black" > </Label>
+		<Label id='instr_classes' text='Classes: ' color='white' backgroundColor="black"> </Label>
+		<Label id='instr_due_dates' text='Deu Dates: ' color='white' backgroundColor="black"> </Label>
 		
+		<Label id="instr_announcements" text="announcements" color="white" backgroundColor="black"></Label>
 	</View>
 	</Window>
 </Alloy>

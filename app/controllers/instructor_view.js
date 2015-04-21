@@ -1,16 +1,38 @@
 var args = arguments[0] || {};
 
-var win=Alloy.createController('instructor_view').getView();
- win.open();
+
  
 var instructor= Ti.UI.createWindow({
   id : 'instructor',
+	color: 'white',
 });
-var lab1 = Titanium.UI.createLabel({
+var welcome = Titanium.UI.createLabel({
 		text : 'Welcom instructor',
-		class : "listitem",
-		id: 'test',
-		});
+		
+		id: 'welcome',
+		
+	});
+	
+var classes = Titanium.UI.createLabel({
+		text:'Clases:',
+		
+		id:'instr_classes',
+		
+});
+
+var announcements = Titanium.UI.createLabel({
+		text:'Announcements:',
+		
+		id:'instr_announcements',
+		
+});
+
+var instr_due_dates = Titanium.UI.createLabel({
+		text:'Due Dates:',
+		
+		id:'intr_due_dates',
+		
+});
 
 
 

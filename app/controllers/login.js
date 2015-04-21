@@ -7,7 +7,7 @@ function checkLogin(e){
 	//ogin: 'dummy variable for testing',	
     login: $.username.value,
     password: $.password.value,
-}, function (e) {
+}, function (e){
     if (e.success) {
         var user = e.users[0];
         
@@ -22,7 +22,8 @@ function checkLogin(e){
             Ti.App.Properties.setString('id', user.id);
     	Alloy.Globals.dash = $.dash;
 		dash.open();
-    	}    
+    	}
+    	else{    
     // if the above is fails then the user must be a standard user or student the branch of into student ...this is working correctly
         alert('Success:\n' +
             'id: ' + user.id + '\n' +
@@ -34,12 +35,14 @@ function checkLogin(e){
             Ti.App.Properties.setString('id', user.id);
     	Alloy.Globals.dash = $.dash;
 		dash.open();
-    } else {
-        alert('Error:\n' +
-            ((e.error && e.message) || JSON.stringify(e)));
+    } 
+    
+    	// loads even if no error occures
+        /*alert('Error:\n' +
+            ((e.error && e.message) || JSON.stringify(e)));*/
     }
 });
-}
+};
 function createUser_view(e){
 	
 	var dash =Alloy.createController('create_user').getView();

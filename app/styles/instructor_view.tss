@@ -21,16 +21,49 @@
 	layout: 'vertical',
     width: Ti.UI.FILL,
     height: Ti.UI.FILL,
-    backgroundColor : "#dadada"
+    backgroundColor : "#white",
 }
 
-"#test":{
+"#welcome":{
 	
     width: Ti.UI.FILL,
-    backgroundColor : "#2B2B2B",
+    backgroundColor : "white",
     top : 3,
     bottom : 3,
     textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+"#instr_announcements":{
+	
+    width: Ti.UI.FILL,
+    backgroundColor : "white",
+    top : 3,
+    bottom : 3,
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+
+"#instr_due_dates":{
+	
+    width: Ti.UI.FILL,
+    backgroundColor : "#white",
+    top : 3,
+    bottom : 3,
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+
+"instr_classes":{
+	
+    width: Ti.UI.FILL,
+    backgroundColor : "#white",
+    top : 3,
+    bottom : 3,
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+
+"#label1" : {
+	
+width : "25%",
+textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+  
 }
 /**  
  * 	
