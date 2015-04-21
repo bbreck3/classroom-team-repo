@@ -1,0 +1,8 @@
+<Alloy>
+	<Window id="instructor">
+	<View class="container">
+		<Label id="test" text="Welcome instructor" color="white"  backgroundColor="black" > </Label>
+		
+	</View>
+	</Window>
+</Alloy>

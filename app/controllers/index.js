@@ -12,9 +12,15 @@ function doClick(e) {
  */
 
 
+
+
+
  Cloud.Users.showMe(function (e) {
     if (e.success) {
         var user = e.users[0];
+       	
+       	
+        
         alert('Success:\n' +
             'idAA: ' + user.id);
             Ti.App.username = user.username;
@@ -33,6 +39,31 @@ function doClick(e) {
  win.open();
     }
 });
+
+
+
+
+
+
+/*
+ * 
+ * 					if(user!=null && user.admin==="true"){
+					alert('instructor');
+					 var dash=Alloy.createController('instructor_view').getView();
+    			Alloy.Globals.dash = $.dash;
+				dash.open();
+									
+					
+				}
+				else if(user!=null && user.admin==="false"){
+					alert('student');
+					var dash=Alloy.createController('index').getView();
+    			Alloy.Globals.dash = $.dash;
+				dash.open();
+					
+				}
+ * 
+ */
 
 function genBox(name, cid, i){
 	//alert(cid +' genbox' + i);

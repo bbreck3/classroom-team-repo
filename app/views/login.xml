@@ -17,7 +17,7 @@
 		<Label color="white" shadowColor="#aaa" text="Remember Me?"></Label>
 		<Switch id="remember" value="true" />
 		</View> -->
-		<Button id="btnLogin" title="Login" onClick="checkLogin"/>i
+		<Button id="btnLogin" title="Login" onClick="checkLogin"/>
 		<Label id="label3" color="white" shadowColor="#aaa" text="Forgot Password?" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"
              />
              <Label id="label4" color="white" shadowColor="#aaa" text="Create Account" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" onClick="createUser_view"
