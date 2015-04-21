@@ -54,6 +54,15 @@ button.addEventListener('click', function() {
  	
  	win.open();
 });
+button.addEventListener('longpress', function() {
+	Ti.App.cur_cid = cid;
+ 	Ti.App.cur_name = name;
+	
+	var check=Alloy.createController('checkin').getView();
+ 	check.cid = cid;
+ 	
+ 	check.open();
+});
 
 
 $.classes.add(button);

@@ -1,0 +1,9 @@
+<Alloy>
+	<Window id='checkin'>
+	<View  class="container">
+		<TextField id="checkinID"></TextField>
+		<Button title="Enter Check-in ID" id="addcheck"/>
+		
+	</View>
+	</Window>
+</Alloy>
