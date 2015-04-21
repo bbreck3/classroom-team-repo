@@ -96,60 +96,12 @@ Cloud.Objects.query({
 });
 
 
-
-// var checkUser = Ti.App.Properties.getString('id', false);
-// if (checkUser == false){
-// var win=Alloy.createController('login').getView();
- // win.open();
-// }
-// else{
-	// Cloud.Users.show({
-    // id: Ti.App.Properties.getString('id')
-// }, function (e) {
-	// if (e.success) {
-        // var user = e.users[0];
-        // alert('1111Success:\n' +
-            // 'id: ' + user.id + '\n' +
-            // 'first name: ' + user.username + '\n' +
-            // 'last name: ' + user.subscribed);
-            // classList = user.subscribed;
-            // for (a = 0; a<classList.length;a++){
-//             	
-            	// genBox(classList[a],'Cmsc');
-            	// } 
-    // } else {
-        // alert('Error:\n' +
-            // ((e.error && e.message) || JSON.stringify(e)));
-    // }
-// });
-// }
-
-
-
-
-// $.course1.addEventListener('click', function() {  // <-- once the user is logged in from the login screen, is it really neccessary to log them in again?
-	// login('course1');
-// });
-// $.course1.addEventListener('click', function() {
-	// var win=Alloy.createController('classes').getView();
- 	// win.open();
-// });
-// 
-// $.course2.addEventListener('click', function() {
-	// var win=Alloy.createController('classes').getView();
- 	// win.open();
-// });
-// 
-// $.course3.addEventListener('click', function() {
-	// var win=Alloy.createController('classes').getView();
- 	// win.open();
-// });
-// 
-// $.course4.addEventListener('click', function() {
-	// var win=Alloy.createController('classes').getView();
- 	// win.open();
-// });
-
+  
+$.addcourse.addEventListener('click', function() {
+	
+	var setwin =Alloy.createController('settings').getView();
+ setwin.open();}
+ );
 
 function login(course){
 	alert('Login Successful!');

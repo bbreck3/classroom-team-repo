@@ -4,9 +4,10 @@
 	<Window id="dash">
 		<View id="container">
 		
-		
+		<View id="topbar">
 		<Label id="select" color="white" text="Click to Select a Course" backgroundColor="black" ></Label>
-		
+		<Button title="+" id="addcourse"/>
+		</View>
 			<!-- Course Selection: Images that once click redirect to that specific course and its cub components -->
 			<View id="classes">
 			<!-- <Button title="course1" id="course1" class="classbox"/>

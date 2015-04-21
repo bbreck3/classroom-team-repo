@@ -1,0 +1,9 @@
+<Alloy>
+	<Window id='settings'>
+	<View  class="container">
+		<TextField id="addcourseID"></TextField>
+		<Button title="Enter Course ID" id="addcourse"/>
+		
+	</View>
+	</Window>
+</Alloy>

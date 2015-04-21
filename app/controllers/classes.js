@@ -5,7 +5,7 @@ var cid = Ti.App.cur_cid;
 
 $.coursename.setText(Ti.App.cur_name);
 Cloud.Objects.query({
-	
+		
         classname : 'classes',
  where: {classID :cid}   
 }, function(e){

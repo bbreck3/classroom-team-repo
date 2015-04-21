@@ -529,16 +529,25 @@ right:5,
 }
 "#select" : {
 	
-    width: Ti.UI.FILL,
+    width: "80%",
+     height: Ti.UI.FILL,
     backgroundColor : "#2B2B2B",
     top : 3,
     bottom : 3,
     textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
 }
+"addcourse" :{
+	width : "20%"
+}
 "#classes" : {
  	layout: 'horizontal',
     width: Ti.UI.FILL,
     height: "40%"
+   }
+   "#topbar" : {
+ 	layout: 'horizontal',
+    width: Ti.UI.FILL,
+    height: "120px"
    }
    "#split" : {
  	layout: 'horizontal',
