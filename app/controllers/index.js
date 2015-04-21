@@ -218,8 +218,7 @@ function addAnnounce(aname,acid){
 		// $.scrollView2.add(lab1);
 // 		
 	// //add acrollvew dynamcally here
-	// }	
-}	
+
 
 
 
