@@ -5,6 +5,7 @@
 		<Label id="coursename" text = '?' color="black" backgroundColor="white" ></Label>
 		<Label id="coursegrade"  text="82.9%" ></Label>
 		</View>	
+		<Button title="Message Students" id="msg"/>
 		<TableView id='selectlist' top="20">
 			<TableViewRow id="assignments" class="sublist" title="Assignments" hasChild="true"></TableViewRow>
 			<TableViewRow id="lecture"  class="sublist" title="Lecture" hasChild="true"></TableViewRow>

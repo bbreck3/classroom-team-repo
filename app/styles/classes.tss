@@ -7,6 +7,10 @@
     //backgroundColor : "#dadada"
   
 }
+"#msg" : {
+	  backgroundColor: '#797979',
+	  width : "100%"
+}
 "#coursename" : {
 	backgroundColor: 'white',
 	color : '#797979',

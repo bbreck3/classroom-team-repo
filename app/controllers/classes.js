@@ -16,7 +16,15 @@ Cloud.Objects.query({
 		alert('Error: ' + e.error + e.message);
 	}
 });
-
+$.msg.addEventListener('click', function() {
+	// Ti.App.cur_cid = cid;
+ 	// Ti.App.cur_name = name;
+	
+	var wmsg=Alloy.createController('messages').getView();
+ 	wmsg.cid = cid;
+ 	
+ 	wmsg.open();
+});
 var getGrades =[
 ['Test 1',86.5],
 ['Homework 1', 67.2],
