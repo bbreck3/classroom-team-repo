@@ -6,12 +6,12 @@
 		<Label id="coursegrade"  text="82.9%" ></Label>
 		</View>	
 		<Button title="Message Students" id="msg"/>
-		<TableView id='selectlist' top="20">
+		<ScrollView id='selectlist' top="20">
 			<TableViewRow id="assignments" class="sublist" title="Assignments" hasChild="true"></TableViewRow>
 			<TableViewRow id="lecture"  class="sublist" title="Lecture" hasChild="true"></TableViewRow>
 			<TableViewRow id="grades"  class="sublist" title="Grades" hasChild="true"></TableViewRow>
 			<TableViewRow id="collaboration"  class="sublist" title="Collaboration" hasChild="true"></TableViewRow> -->
-	</TableView>
+	</ScrollView>
 		</View>
 	</Window> 
 </Alloy>

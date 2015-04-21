@@ -8,7 +8,7 @@
   
 }
 "#msg" : {
-	  backgroundColor: '#797979',
+	  backgroundColor: '##797979',
 	  width : "100%"
 }
 "#coursename" : {

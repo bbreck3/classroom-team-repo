@@ -36,7 +36,8 @@ function doClick(e) {
 
 function genBox(name, cid, i){
 	//alert(cid +' genbox' + i);
-	
+	addDue(name,cid);
+	addAnnounce(name,cid);
 	var colorID = 'course'  + i; 
 	//alert('colderid' + colorID);
 	var button = $.UI.create('Button',{
@@ -132,31 +133,92 @@ var duedates =[
 ];
 for (b = 0; b<3;b++){
 	
-
-for (a = 0; a<announce.length;a++){
-	var ltxt = "■ " + announce[a];
-	var lab1 = Titanium.UI.createLabel({
-		text : ltxt,
-		class : "listitem",
+function addDue(dname,dcid){
+	Cloud.Objects.query({
+	
+        classname : 'dueDates',
+ where: {classID:dcid}   
+}, function(e){
+	if(e.success){
+		for (i = 0; i < e.dueDates.length;i++ ){
+			//var sname = e.subsTo[i];
+			var due = e.dueDates[i];
+			var ltxt = "■ " + due.dueText;
+			var lab1 = Titanium.UI.createLabel({
+			text : ltxt,
+			class : "listitem",
+		 });
+		$.addClass(lab1,"listitem");
+		$.scrollView2.add(lab1);
+			
+			
+			//showStudents(sname.studentname);
+		}
+		
+	//classes = e.name;
+	//alert('asdf'+e.subsTo.length);
+	} else{
+		alert('Error: ' + e.error + e.message);
+	}
+	
+});
+	
+}
+function addAnnounce(aname,acid){
+	Cloud.Objects.query({
+	
+        classname : 'announce',
+ where: {classID:acid}   
+}, function(e){
+	if(e.success){
+		for (i = 0; i < e.announce.length;i++ ){
+			//var sname = e.subsTo[i];
+			var an = e.announce[i];
+			var ltxt = "■ " + an.announceText;
+			var lab1 = Titanium.UI.createLabel({
+			text : ltxt,
+			class : "listitem",
 		 });
 		$.addClass(lab1,"listitem");
 		$.scrollView1.add(lab1);
+			
+			
+			//showStudents(sname.studentname);
+		}
+		
+	//classes = e.name;
+	//alert('asdf'+e.subsTo.length);
+	} else{
+		alert('Error: ' + e.error + e.message);
+	}
+	
+});
+	
+}
+// for (a = 0; a<announce.length;a++){
+	// var ltxt = "■ " + announce[a];
+	// var lab1 = Titanium.UI.createLabel({
+		// text : ltxt,
+		// class : "listitem",
+		 // });
+		// $.addClass(lab1,"listitem");
+		// $.scrollView1.add(lab1);
 		
 	//add acrollvew dynamcally here
 	}
 	//dash.add(scrollAnnounce);
-for (a = 0; a<duedates.length;a++){
-	
-	var ltxt = "■ " + duedates[a];
-	var lab1 = Titanium.UI.createLabel({
-		text : ltxt,
-		class : "listitem",
-		 });
-		$.addClass(lab1,"listitem");
-		$.scrollView2.add(lab1);
-		
-	//add acrollvew dynamcally here
-	}	
+// for (a = 0; a<duedates.length;a++){
+// 	
+	// var ltxt = "■ " + duedates[a];
+	// var lab1 = Titanium.UI.createLabel({
+		// text : ltxt,
+		// class : "listitem",
+		 // });
+		// $.addClass(lab1,"listitem");
+		// $.scrollView2.add(lab1);
+// 		
+	// //add acrollvew dynamcally here
+	// }	
 }	
 
 
