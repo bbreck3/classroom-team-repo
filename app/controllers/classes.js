@@ -45,6 +45,18 @@ var getGrades =[
   // $.grades.add(row);
 //   
 // }
+$.lecture.addEventListener('click', function(evt) {
+		var lec1 = Titanium.UI.createLabel({
+			text : 'text'});
+			Ti.App.selView = 'lecture';
+ 			//Ti.App.cur_name = name;
+			//$.container.add(lec1);
+			var check=Alloy.createController('dataView').getView();
+ 			check.cid = cid;
+ 	
+ 			check.open();
+
+});
 
 var announce =[
 'CMSC 491: Class is Cancelled 5/2', 
