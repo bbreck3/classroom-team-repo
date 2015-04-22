@@ -7,24 +7,29 @@ function checkLogin(e){
 	//ogin: 'dummy variable for testing',	
     login: $.username.value,
     password: $.password.value,
-}, function (e){
+}, function (e) {
     if (e.success) {
         var user = e.users[0];
+        //the following alert is soley for testing purpose as to ensure that current user is infact a admin or professor user
+        // --> Sam the current admin testing acount is: UserName: testAdmin, Password: password
         
-    	if(user.admin==='true'){  // if the user is an admin meaning instructor branch of to instructor
-    		alert('Success:\n' +
+        
+        if(user.admin==='true'){
+        	alert('admin/instructor user');
+        	 alert('Success:\n' +
             'id: ' + user.id + '\n' +
             'sessionId: ' + Cloud.sessionId + '\n' +
             'user name: ' + user.username + '\n' +
             'password: ' + user.password);
             Ti.App.username = user.username;
-            var dash=Alloy.createController('instructor_view').getView(); // if the user is admin. then create a new path for the instructor -----   the instructor view is the only view for the instructor
+            var instr=Alloy.createController('instr').getView();
+            
             Ti.App.Properties.setString('id', user.id);
-    	Alloy.Globals.dash = $.dash;
-		dash.open();
-    	}
-    	else{    
-    // if the above is fails then the user must be a standard user or student the branch of into student ...this is working correctly
+    	//Alloy.Globals.dash = $.instr;
+		instr.open();
+        } else  if(user.admin==='false'){
+        	//the following alert is soley for testing purpose as to ensure that current user is infact a non admin or "student" user
+        	alert('standard/student user');
         alert('Success:\n' +
             'id: ' + user.id + '\n' +
             'sessionId: ' + Cloud.sessionId + '\n' +
@@ -35,14 +40,13 @@ function checkLogin(e){
             Ti.App.Properties.setString('id', user.id);
     	Alloy.Globals.dash = $.dash;
 		dash.open();
-    } 
-    
-    	// loads even if no error occures
-        /*alert('Error:\n' +
-            ((e.error && e.message) || JSON.stringify(e)));*/
+    } else {
+        alert('Error:\n' +
+            ((e.error && e.message) || JSON.stringify(e)));
+    }
     }
 });
-};
+}
 function createUser_view(e){
 	
 	var dash =Alloy.createController('create_user').getView();

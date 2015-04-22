@@ -5,7 +5,7 @@ var cid = Ti.App.cur_cid;
 
 $.coursename.setText(Ti.App.cur_name);
 Cloud.Objects.query({
-	
+		
         classname : 'classes',
  where: {classID :cid}   
 }, function(e){
@@ -16,7 +16,15 @@ Cloud.Objects.query({
 		alert('Error: ' + e.error + e.message);
 	}
 });
-
+$.msg.addEventListener('click', function() {
+	// Ti.App.cur_cid = cid;
+ 	// Ti.App.cur_name = name;
+	
+	var wmsg=Alloy.createController('messages').getView();
+ 	wmsg.cid = cid;
+ 	
+ 	wmsg.open();
+});
 var getGrades =[
 ['Test 1',86.5],
 ['Homework 1', 67.2],
@@ -37,6 +45,18 @@ var getGrades =[
   // $.grades.add(row);
 //   
 // }
+$.lecture.addEventListener('click', function(evt) {
+		var lec1 = Titanium.UI.createLabel({
+			text : 'text'});
+			Ti.App.selView = 'lecture';
+ 			//Ti.App.cur_name = name;
+			//$.container.add(lec1);
+			var check=Alloy.createController('dataView').getView();
+ 			check.cid = cid;
+ 	
+ 			check.open();
+
+});
 
 var announce =[
 'CMSC 491: Class is Cancelled 5/2', 

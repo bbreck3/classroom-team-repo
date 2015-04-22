@@ -12,15 +12,9 @@ function doClick(e) {
  */
 
 
-
-
-
  Cloud.Users.showMe(function (e) {
     if (e.success) {
         var user = e.users[0];
-       	
-       	
-        
         alert('Success:\n' +
             'idAA: ' + user.id);
             Ti.App.username = user.username;
@@ -40,34 +34,10 @@ function doClick(e) {
     }
 });
 
-
-
-
-
-
-/*
- * 
- * 					if(user!=null && user.admin==="true"){
-					alert('instructor');
-					 var dash=Alloy.createController('instructor_view').getView();
-    			Alloy.Globals.dash = $.dash;
-				dash.open();
-									
-					
-				}
-				else if(user!=null && user.admin==="false"){
-					alert('student');
-					var dash=Alloy.createController('index').getView();
-    			Alloy.Globals.dash = $.dash;
-				dash.open();
-					
-				}
- * 
- */
-
 function genBox(name, cid, i){
 	//alert(cid +' genbox' + i);
-	
+	addDue(name,cid);
+	addAnnounce(name,cid);
 	var colorID = 'course'  + i; 
 	//alert('colderid' + colorID);
 	var button = $.UI.create('Button',{
@@ -84,6 +54,15 @@ button.addEventListener('click', function() {
  	win.cid = cid;
  	
  	win.open();
+});
+button.addEventListener('longpress', function() {
+	Ti.App.cur_cid = cid;
+ 	Ti.App.cur_name = name;
+	
+	var check=Alloy.createController('checkin').getView();
+ 	check.cid = cid;
+ 	
+ 	check.open();
 });
 
 
@@ -127,60 +106,12 @@ Cloud.Objects.query({
 });
 
 
-
-// var checkUser = Ti.App.Properties.getString('id', false);
-// if (checkUser == false){
-// var win=Alloy.createController('login').getView();
- // win.open();
-// }
-// else{
-	// Cloud.Users.show({
-    // id: Ti.App.Properties.getString('id')
-// }, function (e) {
-	// if (e.success) {
-        // var user = e.users[0];
-        // alert('1111Success:\n' +
-            // 'id: ' + user.id + '\n' +
-            // 'first name: ' + user.username + '\n' +
-            // 'last name: ' + user.subscribed);
-            // classList = user.subscribed;
-            // for (a = 0; a<classList.length;a++){
-//             	
-            	// genBox(classList[a],'Cmsc');
-            	// } 
-    // } else {
-        // alert('Error:\n' +
-            // ((e.error && e.message) || JSON.stringify(e)));
-    // }
-// });
-// }
-
-
-
-
-// $.course1.addEventListener('click', function() {  // <-- once the user is logged in from the login screen, is it really neccessary to log them in again?
-	// login('course1');
-// });
-// $.course1.addEventListener('click', function() {
-	// var win=Alloy.createController('classes').getView();
- 	// win.open();
-// });
-// 
-// $.course2.addEventListener('click', function() {
-	// var win=Alloy.createController('classes').getView();
- 	// win.open();
-// });
-// 
-// $.course3.addEventListener('click', function() {
-	// var win=Alloy.createController('classes').getView();
- 	// win.open();
-// });
-// 
-// $.course4.addEventListener('click', function() {
-	// var win=Alloy.createController('classes').getView();
- 	// win.open();
-// });
-
+  
+$.addcourse.addEventListener('click', function() {
+	
+	var setwin =Alloy.createController('settings').getView();
+ setwin.open();}
+ );
 
 function login(course){
 	alert('Login Successful!');
@@ -202,32 +133,92 @@ var duedates =[
 ];
 for (b = 0; b<3;b++){
 	
-
-for (a = 0; a<announce.length;a++){
-	var ltxt = "■ " + announce[a];
-	var lab1 = Titanium.UI.createLabel({
-		text : ltxt,
-		class : "listitem",
+function addDue(dname,dcid){
+	Cloud.Objects.query({
+	
+        classname : 'dueDates',
+ where: {classID:dcid}   
+}, function(e){
+	if(e.success){
+		for (i = 0; i < e.dueDates.length;i++ ){
+			//var sname = e.subsTo[i];
+			var due = e.dueDates[i];
+			var ltxt = "■ " + due.dueText;
+			var lab1 = Titanium.UI.createLabel({
+			text : ltxt,
+			class : "listitem",
+		 });
+		$.addClass(lab1,"listitem");
+		$.scrollView2.add(lab1);
+			
+			
+			//showStudents(sname.studentname);
+		}
+		
+	//classes = e.name;
+	//alert('asdf'+e.subsTo.length);
+	} else{
+		alert('Error: ' + e.error + e.message);
+	}
+	
+});
+	
+}
+function addAnnounce(aname,acid){
+	Cloud.Objects.query({
+	
+        classname : 'announce',
+ where: {classID:acid}   
+}, function(e){
+	if(e.success){
+		for (i = 0; i < e.announce.length;i++ ){
+			//var sname = e.subsTo[i];
+			var an = e.announce[i];
+			var ltxt = "■ " + an.announceText;
+			var lab1 = Titanium.UI.createLabel({
+			text : ltxt,
+			class : "listitem",
 		 });
 		$.addClass(lab1,"listitem");
 		$.scrollView1.add(lab1);
+			
+			
+			//showStudents(sname.studentname);
+		}
+		
+	//classes = e.name;
+	//alert('asdf'+e.subsTo.length);
+	} else{
+		alert('Error: ' + e.error + e.message);
+	}
+	
+});
+	
+}
+// for (a = 0; a<announce.length;a++){
+	// var ltxt = "■ " + announce[a];
+	// var lab1 = Titanium.UI.createLabel({
+		// text : ltxt,
+		// class : "listitem",
+		 // });
+		// $.addClass(lab1,"listitem");
+		// $.scrollView1.add(lab1);
 		
 	//add acrollvew dynamcally here
 	}
 	//dash.add(scrollAnnounce);
-for (a = 0; a<duedates.length;a++){
-	
-	var ltxt = "■ " + duedates[a];
-	var lab1 = Titanium.UI.createLabel({
-		text : ltxt,
-		class : "listitem",
-		 });
-		$.addClass(lab1,"listitem");
-		$.scrollView2.add(lab1);
-		
-	//add acrollvew dynamcally here
-	}	
-}	
+// for (a = 0; a<duedates.length;a++){
+// 	
+	// var ltxt = "■ " + duedates[a];
+	// var lab1 = Titanium.UI.createLabel({
+		// text : ltxt,
+		// class : "listitem",
+		 // });
+		// $.addClass(lab1,"listitem");
+		// $.scrollView2.add(lab1);
+// 		
+	// //add acrollvew dynamcally here
+
 
 
 
