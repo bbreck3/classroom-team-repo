@@ -10,15 +10,32 @@
 		
 		
 		<!-- this is really wierd : the same properties are holding for dues and announcements, but only the texts for announcements are working -->
-		<Label id="instr_due_dates" color="white" shadowColor="#aaa" text="Due Dates"> </Label>
+
 		
-		<Label id="instr_announcements" color="white" shadowColor="#aaa" text="Announcements" ></Label>
+		<Label id="instr_classes" color="white" shadowColor="#aaa" text="Classes"/>
+		
+		<Label id="instr_due_dates" color="white" shadowColor="#aaa" text="Due Dates"/>
+		
+		<Label id="instr_announcements" color="white" shadowColor="#aaa" text="Annuncements"/>
+		
+		<TextField id="instr_a_tf" text="Enter an Annoucement"></TextField>
+		
+		<TextField id="instr_dd_tf" text="Enter an Annoucement"></TextField>
+		<Button id="submit" title="Submit" text="Submit" onClick="submit"> </Button>
+		<Button id="random" title ="generate random" onClick="random"> </Button>
 		
 		
-		<!--textFields for instructor to enter information into -->
+		
+		
+		
+		
+		
+		
+		
+		<!--textFields for instructor to enter information into
 		<TextField id="instr_ann_update" hintText="Enter a Value"></TextField>
 		<TextField id="instr_due_update" hintText="Enter a Value"></TextField>
-		<Button id="btn_instr_submit" text="Submit" onClick="display_info"></Button>
+		<Button id="btn_instr_submit" text="Submit"></Button>   -->
 		
 		<!--  Drop Down Menu for the professor to choose the correct class  -->
 		 <!--		ScrollView in testing.. 
@@ -31,21 +48,21 @@
 						<Label  text="CMSC 420: Due date extended for project" class = "listitem"></Label>
 		</ScrollView>	 -->
 		
-		<Picker id="picker" top="50" selectionIndicator="true" useSpinner="true">
+		<!--<Picker id="picker" top="50" selectionIndicator="true" useSpinner="true">
             <PickerColumn id="column1">
                 <PickerRow title="CMSC 491"/>
                 <PickerRow title="CMSC 420"/>
                 <PickerRow title="MATH 310"/>
                 
             </PickerColumn>
-            <!-- Picker shorthand notation -->
+            <!-- Picker shorthand notation 
             <!--<Column id="column2">
                 <Row title="red"/>
                 <Row title="green"/>
                 <Row title="blue"/>
                 <Row title="orange"/>
-            </Column> -->
-        </Picker> 	
+            </Column> 
+ </Picker> 	-->
 	
 				
 		

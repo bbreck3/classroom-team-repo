@@ -1,81 +1,170 @@
 //var args = arguments[0] || {};
-
+var Cloud = require('ti.cloud');
+var a_test = "announcement 1 from instructor";
+var dd_test = "due dates 1 from instructor";
+var random_val ="";
 
  
 var instr= Ti.UI.createWindow({
   id : 'instr',
-	color: 'white',
+	color: 'black',
 });
 
 instr.open();
-var welcome = Titanium.UI.createLabel({
-		text : 'Welcom instructor',
-		
-		id: 'welcome',
-		
-	});
+
+var instr_dd =Ti.UI.createLabel({
+	id:'instr_due_dates',
+	left:"10%",
+	top:"20%",
+	color:"white",
+	text:'Dues Dates',
+});
+
+
+
+
+var instr_ann =Ti.UI.createLabel({
+	id:'instr_anncouncements',
+	left:"10%",
+	top:'30%',
+	color:"white",
+	text:'Annuucements',
+});
+
+
+
+var instr_classes =Ti.UI.createLabel({
+	id:'instr_classes',
+	left:"10%",
+	top:'10%',
+	color:"white",
+	text:'Classes',
+});
+
+var hintText = Ti.UI.createLabel({
+    text : 'Enter your name',
+    color : 'green',
+    font : {
+        fontSize : 12
+    },
+    backgroundColor : 'white',
+    height : 35,
+    width : 240,
+ 
+});
+
+var ann_tf = Ti.UI.createTextField({
+	id:"instr_a_tf",
+	top:"50%",
+	right:"10%",
+	width:"50%",
+	color:hintText.color,
+});
+
+
+var due_tf = Ti.UI.createTextField({
+	id:"instr_dd_tf",
+	top:"60%",
+	right:"10%",
+	width:"50%",
+	color:hintText.color,
+});
+
+var button = Ti.UI.createButton({
+	id: 'submit',
+	title: 'Submit',
+	top:"80%",
+	width:"20%",
+	right:"10%",
 	
-var classes = Titanium.UI.createLabel({
-		text:'Clases:',
-		
-		id:'instr_classes',
-		
 });
 
-
-instr.add(classes);
-
-var announcements = Titanium.UI.createLabel({
-		text:'Announcements:',
-		
-		id:'instr_announcements',
-		
+var rand = Ti.UI.createButton({
+	id:'random',
+	title: 'Random',
+	top:"90%",
+	width:"20%",
+	right:"10%",
 });
-instr.add(announcements);
 
-var instr_due_dates = Titanium.UI.createLabel({
-		text:'Due Dates:',
+/*button.addEventListener('click', function(){
+		alert('Anouncement: ' +ann_tf.value + 'Due Dates: ' + due_tf.value);
+		Ti.API.info("Tesing Event Listenere");
+});*/
+
+
+/*function submit(e){
+alert('Anouncement: ' +a_test + 'Due Dates: ' + dd_test);
+		//Ti.API.info("Tetsing fuction call");	
 		
-		id:'intr_due_dates',
+		Cloud.Objects.update({
+		classname: 'announce',
+		id: '553693c47eead2058677f96c',  
+		fields:{
+			announceText: a_test,
+			due
+		}
 		
-});
-instr.add(instr_due_dates);
-
-
-var button= Titanium.UI.createButton({
-	text:'Submit',
-	id:'btn_instr_submit',
 	
+}, function(e){
+	if(e.success){
+		alert('Success!');
+	} else {
+		alert("Error: \n" + 
+				((e.error && e.message) || JSON.stringify(e)));
+	}
 });
+};*/
 
-var txtFld_ann = Titanium.UI.createTextField({
-    id:'instr_ann_update',
-    hintText:'Enter an Update',
-    borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+function submit(e){
+	
+	alert('Anouncement: ' +a_test + 'Due Dates: ' + dd_test);
+		//Ti.API.info("Tetsing fuction call");	
+		
+		Cloud.Objects.update({
+		classname: 'dueDates',
+		id: '55369366de9cf38e1874fbc8',  
+		fields:{
+			dueText: dd_test,
+		
+		}
+		
+	
+}, function(e){
+	if(e.success){
+		alert('Success!');
+	} else {
+		alert("Error: \n" + 
+				((e.error && e.message) || JSON.stringify(e)));
+	}
 });
-instr.add(txtFld_ann);
+};
+
+function random(minVal, maxVal){
+	var minVal =1;
+	var maxVal=20;
+	alert("minVal: " + minVal + "maxVal: " +maxVal);
+	var randVal = minVal+(Math.random()*(maxVal-minVal)); 
+
+var random_Val=Math.round(randVal);
+alert('random val: ' + random_Val);
+};
 
 
-var txtFld_due_dates = Titanium.UI.createTextField({
-    id:'instr_due_update',
-    hintText:'Enter an update',
-    borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
-});
-
-instr.add(txtFld_due_dates);
-
-
-/*button.addEventListener('click',function(e){
-	//alert('Picker choice: ' + ' \n anouncement: ' + txtFld_ann.value + '\n Due Dates: ' + txtFld_due_dates.value  );
-	alert('testing');
-});
-instr.add(button);*/
-
-function display_info(e){
-	alert('Picker choice: ' + ' \n anouncement: ' + txtFld_ann.value + '\n Due Dates: ' + txtFld_ann.value  );
-	Titanium.API.info('testing announcements: ' + txtFld_ann.value);
-
-}
+		
 
 
 
+
+/*button.addEventListener('click',function(e)
+{
+   Titanium.API.info("You clicked the button");
+});*/
+
+
+instr.add(instr_classes);
+instr.add(instr_ann);
+instr.add(instr_dd);
+instr.add(ann_tf);
+instr.add(due_tf);
+instr.add(button);
