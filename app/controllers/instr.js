@@ -87,6 +87,85 @@ var rand = Ti.UI.createButton({
 	right:"10%",
 });
 
+/*var picker = Ti.UI.createPicker({
+  top:'10%',
+	right: "10%",
+	width:"40%",
+	
+	selectionIndicator: true,
+	id:'class_picker',
+});*/
+
+/*var col = Ti.UI.createPickerColumn();  //createPickerColumn();
+	for(i=0; i<=5; i++){
+		col.addRow(Ti.UI.createPickerRow({title: i}));
+	};
+
+picker.selectionIndicator = true;*/
+/*var data = [];
+data[0] = Ti.UI.createPickerRow({title: CMSC-491, val:CMSC-491});
+data[1] = Ti.UI.createPickerRow({title: CMSC-420, val:CMSC-420});
+data[2] = Ti.UI.createPickerRow({title: MATH-301, val:MATH-301});
+data[3] = Ti.UI.createPickerRow({title: MATH-310, val:MATH-310});*/
+  
+  
+  /*<PickerRow title="CMSC 491"/>
+                <PickerRow title="CMSC 420"/>
+                <PickerRow title="MATH 310"/>
+                 <PickerRow title="MATH 301"/>*/
+//picker.add(data);
+
+var picker = Ti.UI.createPicker({
+  top:50
+});
+
+var data = [];
+data[0]=Ti.UI.createPickerRow({title:'CMSC 491'});
+data[1]=Ti.UI.createPickerRow({title:'CMSC 420'});
+data[2]=Ti.UI.createPickerRow({title:'MATH 301'});
+data[3]=Ti.UI.createPickerRow({title:'MATH 310'});
+
+
+
+
+picker.selectionIndicator = true;
+
+
+// must be after picker has been displayed
+//picker.setSelectedRow(0, 2, false); // select Mangos
+
+
+
+
+
+
+
+
+
+
+var test_lab = Ti.UI.createLabel({
+		
+	bottom:"10%",
+		text:"Picker Choice",
+	left: "10%",
+});
+
+
+
+Ti.API.info(test_lab.text = picker.getSelectedRow(picker.setSelectedRow(0,1,false)));
+
+picker.addEventListener('change', function(e){
+	test_lab.text;
+	
+});
+
+/*function picker_selection(e){
+	alert("testing");
+	alert("picker selection: " + test_lab.text);
+	
+}*/
+//instr.add(picker);
+//instr.add(test_lab);
 /*button.addEventListener('click', function(){
 		alert('Anouncement: ' +ann_tf.value + 'Due Dates: ' + due_tf.value);
 		Ti.API.info("Tesing Event Listenere");
@@ -168,3 +247,9 @@ instr.add(instr_dd);
 instr.add(ann_tf);
 instr.add(due_tf);
 instr.add(button);
+
+
+instr.add(picker);
+
+picker.add(data);
+instr.add(test_lab);
