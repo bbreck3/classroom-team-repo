@@ -1,0 +1,86 @@
+"#instr" : {
+	 //backgroundColor: '#797979',
+	 backgroundColor:'black',
+ fullscreen: false,
+    orientationModes: [
+		Ti.UI.PORTRAIT]
+}
+
+"#instr_due_dates":{
+	
+top:"60%",
+width : "25%",
+left:"10%",
+}
+ 
+
+"#instr_announcements":{
+	top:'50%',
+	width: '30%',
+	left:'10%',
+	
+}
+
+
+
+
+"#instr_classes":{
+	top:'10%',
+	width: '25%',
+	left:'10%',
+	
+}
+
+
+"#instr_a_tf":{
+	hintText:'Enter an Announcement',
+	top:"50%",
+	right:"10%",
+	width:"50%",
+	
+}
+"#instr_dd_tf":{
+	hintText:'Enter an Due Date',
+	top:"60%",
+	right:"10%",
+	width:"50%",
+	
+}
+
+"#submit": {
+	id:'submit',
+	title: 'Submit',
+	top:"80%",
+	width:"20%",
+	right:"10%",
+		
+	
+}
+"#random": {
+	id:'random',
+	title: 'Random',
+	top:"90%",
+	width:"20%",
+	right:"10%",
+		
+	
+}
+
+"#class_picker":{
+	
+	 top:'10%',
+	right: "10%",
+	width:"40%",
+	selectionIndicator: true,
+	
+}
+
+
+"#test_lab":{
+	bottom:"10%",
+	text:"Picker Choice",
+	left: "10%",
+	
+	
+}
+

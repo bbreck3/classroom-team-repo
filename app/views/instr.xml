@@ -1,0 +1,102 @@
+<Alloy>
+	<Window id="instr">
+		
+	<View id ="contain">
+		
+		<!-- Labels that contian the titel of tbhe subject the instructor can choose from -->
+		<!--<Label id="" text="Welcome instructor"  backgroundColor="green" > </Label> -->
+		<Label id="instr_classes" color="white" shadowColor="#aaa" text="Select a class"> </Label>
+		
+		
+		
+		<!-- this is really wierd : the same properties are holding for dues and announcements, but only the texts for announcements are working -->
+
+		
+		<Label id="instr_classes" color="white" shadowColor="#aaa" text="Classes"/>
+		
+		<Label id="instr_due_dates" color="white" shadowColor="#aaa" text="Due Dates"/>
+		
+		<Label id="instr_announcements" color="white" shadowColor="#aaa" text="Annuncements"/>
+		
+		<TextField id="instr_a_tf" text="Enter an Annoucement"></TextField>  
+
+		<TextField id="instr_dd_tf" text="Enter an Due Dates"></TextField>
+		<Button id="submit" title="Submit" text="Submit" onClick="submit"> </Button>
+		<Button id="random" title ="generate random" onClick="random"> </Button>
+		
+		<Picker id="picker" top="50" selectionIndicator="true">
+            <PickerColumn id="column1">
+                <PickerRow title="CMSC 491"/>
+                <PickerRow title="CMSC 420"/>
+                <PickerRow title="MATH 301"/>
+                <PickerRow title="MATH 310"/>
+            </PickerColumn>
+            <!-- Picker shorthand notation -->
+            <!--<Column id="column2">
+                <Row title="red"/>
+                <Row title="green"/>
+                <Row title="blue"/>
+                <Row title="orange"/>
+       </Column>-->
+        </Picker>
+		
+		
+		
+		<!--<Picker id="class_picker">
+			
+			<PickerColumn id="column1">
+                <PickerRow title="CMSC 491"/>
+                <PickerRow title="CMSC 420"/>
+                <PickerRow title="MATH 310"/>
+                 <PickerRow title="MATH 301"/>
+                
+            </PickerColumn>
+			
+	</Picker>-->
+		
+		
+		<Label id="test_lab" color="white" shadowColor="#aaa" text="Picker Choice"/>
+		
+		
+		
+		
+		
+		
+		
+		<!--textFields for instructor to enter information into
+		<TextField id="instr_ann_update" hintText="Enter a Value"></TextField>
+		<TextField id="instr_due_update" hintText="Enter a Value"></TextField>
+		<Button id="btn_instr_submit" text="Submit"></Button>   -->
+		
+		<!--  Drop Down Menu for the professor to choose the correct class  -->
+		 <!--		ScrollView in testing.. 
+		 	
+		 	<ScrollView class="class_scroller" layout= "vertical" showVerticalScrollIndicator="true">
+				<Label  text="■ CMSC 521: Due date extended for project" class = "listitem"></Label>
+						<Label  text="CMSC 491" class = "listitem" ></Label>
+						<Label text="CMSC 491" class = "listitem" ></Label>
+						<Label  text="MATH 310: Class is Cancelled 5/2" class = "listitem" ></Label>
+						<Label  text="CMSC 420: Due date extended for project" class = "listitem"></Label>
+		</ScrollView>	 -->
+		
+		<!--<Picker id="picker" top="50" selectionIndicator="true" useSpinner="true">
+            <PickerColumn id="column1">
+                <PickerRow title="CMSC 491"/>
+                <PickerRow title="CMSC 420"/>
+                <PickerRow title="MATH 310"/>
+                
+            </PickerColumn>
+            <!-- Picker shorthand notation 
+            <!--<Column id="column2">
+                <Row title="red"/>
+                <Row title="green"/>
+                <Row title="blue"/>
+                <Row title="orange"/>
+            </Column> 
+ </Picker> 	-->
+	
+				
+		
+	</View>
+	</Window>
+</Alloy>
