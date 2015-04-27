@@ -164,6 +164,11 @@ function addDue(dname,dcid){
 });
 	
 }
+
+function logout(e){
+	var login=Alloy.createController('login').getView();
+	login.open();
+};
 function addAnnounce(aname,acid){
 	Cloud.Objects.query({
 	
@@ -218,7 +223,6 @@ function addAnnounce(aname,acid){
 		// $.scrollView2.add(lab1);
 // 		
 	// //add acrollvew dynamcally here
-
 
 
 

@@ -23,6 +23,7 @@
 		<TextField id="instr_dd_tf" text="Enter an Due Dates"></TextField>
 		<Button id="submit" title="Submit" text="Submit" onClick="submit"> </Button>
 		<Button id="random" title ="generate random" onClick="random"> </Button>
+		<Button id="logout" title ="Logout" onClick="logout"> </Button>
 		
 		<Picker id="picker" top="50" selectionIndicator="true">
             <PickerColumn id="column1">

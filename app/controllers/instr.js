@@ -149,8 +149,12 @@ var test_lab = Ti.UI.createLabel({
 	left: "10%",
 });
 
-
-
+var logout = Ti.UI.createButton({
+		 top:'10%',
+	right: "10%",
+	width:"40%",
+	title:"Logout"
+});
 Ti.API.info(test_lab.text = picker.getSelectedRow(picker.setSelectedRow(0,1,false)));
 
 picker.addEventListener('change', function(e){
@@ -172,15 +176,46 @@ picker.addEventListener('change', function(e){
 
 alert($.instr_a_tf.value + " " + $.instr_dd_tf.value);
 
+
+
+/**
+ *
+ *  The bellow pulls updates the Custom Objects for announcements and duedates;
+ *  There has to be a better way to do it but this works for now....
+ *  
+ * 
+ * 
+ * This update Anouncements and and Due dates for "japplesseed".....
+ *  
+ */
 function submit(e){
-alert('Anouncement: ' + $.instr_a_tf.value + 'Due Dates: ' + $.instr_dd_tf.value);
+alert('Anouncement: ' + $.instr_a_tf.value + '\n Due Dates: ' + $.instr_dd_tf.value);
 		//Ti.API.info("Tetsing fuction call");	 $.instr_dd_tf.value
-		
+		//Updates due Dates
 		Cloud.Objects.update({
-		classname: 'announce',
+		classname: 'dueDates',
 		id: '55369366de9cf38e1874fbc8',  
 		fields:{
-			announceText: a_test,
+			announceText: $.instr_a_tf.value,
+			dueText: $.instr_dd_tf.value
+		}
+		
+	
+}, function(e){
+	if(e.success){
+		alert('Success!');
+	} else {
+		alert("Error: \n" + 
+				((e.error && e.message) || JSON.stringify(e)));
+	}
+});
+
+//update announcements
+Cloud.Objects.update({
+		classname: 'announce',
+		id: '553693c47eead2058677f96c',  
+		fields:{
+			announceText: $.instr_a_tf.value,
 	
 		}
 		
@@ -193,7 +228,10 @@ alert('Anouncement: ' + $.instr_a_tf.value + 'Due Dates: ' + $.instr_dd_tf.value
 				((e.error && e.message) || JSON.stringify(e)));
 	}
 });
-};
+
+}
+
+
 
 /*function submit(e){
 	
@@ -202,7 +240,7 @@ alert('Anouncement: ' + $.instr_a_tf.value + 'Due Dates: ' + $.instr_dd_tf.value
 		
 		Cloud.Objects.update({
 		classname: 'dueDates',
-		id: '55369366de9cf38e1874fbc8',  
+		id: '553693c47eead2058677f96c',  
 		fields:{
 			dueText: dd_test,
 		
@@ -219,6 +257,18 @@ alert('Anouncement: ' + $.instr_a_tf.value + 'Due Dates: ' + $.instr_dd_tf.value
 });
 };*/
 
+
+/*
+ * 
+ *   Logout function below:
+ * 		
+ * 
+ */
+
+function logout(e){
+	var login=Alloy.createController('login').getView();
+	login.open();
+};
 
 /*
  * 

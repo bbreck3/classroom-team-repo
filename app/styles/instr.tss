@@ -8,14 +8,14 @@
 
 "#instr_due_dates":{
 	
-top:"60%",
+top:"40%",
 width : "25%",
 left:"10%",
 }
  
 
 "#instr_announcements":{
-	top:'50%',
+	top:'20%',
 	width: '30%',
 	left:'10%',
 	
@@ -34,16 +34,16 @@ left:"10%",
 
 "#instr_a_tf":{
 	hintText:'Enter an Announcement',
-	top:"50%",
+	top:"25%",
 	right:"10%",
-	width:"50%",
+	width:"70%",
 	
 }
 "#instr_dd_tf":{
 	hintText:'Enter an Due Date',
-	top:"60%",
+	top:"45%",
 	right:"10%",
-	width:"50%",
+	width:"70%",
 	
 }
 
@@ -82,5 +82,11 @@ left:"10%",
 	left: "10%",
 	
 	
+}
+
+"#logout":{
+	 top:'10%',
+	right: "10%",
+	width:"20%",
 }
 

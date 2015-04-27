@@ -7,6 +7,7 @@
 		<View id="topbar">
 		<Label id="select" color="white" text="Tap&Hold to Check In" backgroundColor="black" ></Label>
 		<Button title="+" id="addcourse"/>
+		<Button title="Logout"  id="logout" onClick="logout"> </Button>
 		</View>
 			<!-- Course Selection: Images that once click redirect to that specific course and its cub components -->
 			<View id="classes">
@@ -72,4 +73,3 @@
             <!-- Use the Require tag to include external Ti.UI.Tab views 
    </TabGroup>	   -->
 		
-
