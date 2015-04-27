@@ -1,0 +1,11 @@
+<Alloy>
+	<Window id="classes"> 
+		<View id = "container" layout='vertical'>
+			<Label text="Tap a student to email" / >
+				<ScrollView id="emailscroll">
+					
+					</ScrollView>
+			
+</View>
+</Window>
+</Alloy>

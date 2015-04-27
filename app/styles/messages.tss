@@ -1,0 +1,21 @@
+
+".container" : {
+  
+}
+"#emailscroll" :{
+	contentHeight: 'auto',
+    contentWidth: 'auto',
+    height: Ti.UI.FILL,
+    layout: 'vertical',
+    showHorizontalScrollIndicator: true,
+    showVerticalScrollIndicator: true,
+    width: Ti.UI.FILL,
+}
+".emailbox" : {
+  //bottom: 10, // used as margin - change to suit
+    height: 40,
+    left: 10, // used as margin - change to suit
+    right: 10, // used as margin - change to suit
+    //top: 10,
+    width: Ti.UI.FILL,
+}

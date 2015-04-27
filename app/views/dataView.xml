@@ -1,0 +1,9 @@
+<Alloy>
+	<Window id="dataView">
+	<View class="container" id="container">
+		<ScrollView id="scrollView1">
+			
+			</ScrollView>
+	</View>
+	</Window>
+</Alloy>

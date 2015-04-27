@@ -1,0 +1,20 @@
+".container" : {
+  fullscreen: false,
+    orientationModes: [
+		Ti.UI.PORTRAIT
+],
+  backgroundColor: '#797979', 
+layout: 'vertical',
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL,
+   //backgroundColor : "#dadada"
+}
+"#checkinID" : {
+	width : "75%",
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_LINE,
+	passwordMask:true
+  
+}
+"#addcheck" : {
+	  width : "100%"
+}
