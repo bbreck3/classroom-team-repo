@@ -3,8 +3,7 @@ var Cloud = require('ti.cloud');
 var a_test = "announcement 1 from instructor";
 var dd_test = "due dates 1 from instructor";
 var random_val ="";
-
- 
+var result="";
 /*var instr= Ti.UI.createWindow({
   id : 'instr',
 	color: 'black',
@@ -220,14 +219,35 @@ alert('Anouncement: ' + $.instr_a_tf.value + 'Due Dates: ' + $.instr_dd_tf.value
 });
 };*/
 
+
+/*
+ * 
+ * Function that computes a random character value to use for the check in value
+ * 
+ */
 function random(minVal, maxVal){
 	var minVal =1;
-	var maxVal=20;
-	alert("minVal: " + minVal + "maxVal: " +maxVal);
-	var randVal = minVal+(Math.random()*(maxVal-minVal)); 
+	var maxVal=61;
+	var check_in_val_pool =[ 'a', 'b', 'c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+							'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+							'0,','1','2','3','4','5','6','8','9'];
+	
 
-var random_Val=Math.round(randVal);
-alert('random val: ' + random_Val);
+	var randVal1;
+	var randVal2;
+	var randVal3;
+	var randVal4;
+	for(i=0; i<4; i++){
+		var randVal1=check_in_val_pool[Math.round((Math.random()*(maxVal-minVal)))];  
+		
+		var randVal2= check_in_val_pool[Math.round((Math.random()*(maxVal-minVal)))]; 
+		var randVal3 =check_in_val_pool[Math.round((Math.random()*(maxVal-minVal)))]; 
+		var randVal4 = check_in_val_pool[Math.round((Math.random()*(maxVal-minVal)))]; 	
+	}
+	result= randVal1+"" +randVal2 +"" + randVal3 + ""+randVal4;	
+	
+alert('random val for checkin: ' +result );
+
 };
 
 
