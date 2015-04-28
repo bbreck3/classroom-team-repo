@@ -22,10 +22,10 @@
 		<TextField id="instr_a_tf" text="Enter an Annoucement"></TextField>  
 
 		<TextField id="instr_dd_tf" text="Enter an Due Dates"></TextField>
-		<Button id="submit" title="Submit" text="Submit" onClick="submit"> </Button>
-		<Button id="random" title ="generate random" onClick="random"> </Button>
-		<Button id="logout" title ="Logout" onClick="logout"> </Button> 
-		<Button id="message" title ="Send Message" onClick="message_stud"> </Button> 
+		<Button id="submit" title="Submit" text="Submit" onClick="submit">Submit</Button>
+		<Button id="random" title ="generate random" onClick="random">Random</Button>
+		<Button id="logout" title ="Logout" onClick="logout">Logout</Button> 
+		<Button id="message" title ="Send Message" onClick="message_stud">Send Message</Button> 
 		
 		<Picker id="picker" selectionIndicator="true">
             <PickerColumn id="column1">
