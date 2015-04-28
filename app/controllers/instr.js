@@ -4,12 +4,13 @@ var a_test = "announcement 1 from instructor";
 var dd_test = "due dates 1 from instructor";
 var random_val ="";
 var result="";
-/*var instr= Ti.UI.createWindow({
-  id : 'instr',
-	color: 'black',
-});*/
 
-//instr.open();
+var class_arr = new Array();
+var class1;
+var class2;
+var class3;
+var class4;
+
 
 var instr_dd =Ti.UI.createLabel({
 	id:'instr_due_dates',
@@ -86,14 +87,27 @@ var rand = Ti.UI.createButton({
 	right:"10%",
 });
 
-/*var picker = Ti.UI.createPicker({
-  top:'10%',
-	right: "10%",
+var picker = Ti.UI.createPicker({
+  top:'20%',
+	right: "30%",
 	width:"40%",
-	
 	selectionIndicator: true,
-	id:'class_picker',
-});*/
+	id:"picker",
+});
+var logout = Ti.UI.createButton({
+	id:'logout',
+	 top:'10%',
+	left: "80%",
+	width:"20%",
+});
+
+var message= Ti.UI.createButton({
+id:'message',
+	top:"70%",
+	width:"20%",
+	right:"10%",
+	
+});
 
 /*var col = Ti.UI.createPickerColumn();  //createPickerColumn();
 	for(i=0; i<=5; i++){
@@ -162,17 +176,6 @@ picker.addEventListener('change', function(e){
 	
 });
 
-/*function picker_selection(e){
-	alert("testing");
-	alert("picker selection: " + test_lab.text);
-	
-}*/
-//instr.add(picker);
-//instr.add(test_lab);
-/*button.addEventListener('click', function(){
-		alert('Anouncement: ' +ann_tf.value + 'Due Dates: ' + due_tf.value);
-		Ti.API.info("Tesing Event Listenere");
-});*/
 
 alert($.instr_a_tf.value + " " + $.instr_dd_tf.value);
 
@@ -297,7 +300,7 @@ function random(minVal, maxVal){
 	}
 	result= randVal1+"" +randVal2 +"" + randVal3 + ""+randVal4;	
 	
-//alert('random val for checkin: ' +result );
+
 Cloud.Objects.query({
 		
         classname : 'classes',
@@ -330,26 +333,72 @@ Cloud.Objects.query({
 });
 }
 
+
+
+
+
+/*
+ * 
+ * 		THe following grabs the classname from the cloud
+ * 
+ */
+
+		Cloud.Objects.query({
+    classname: 'classes',
+    page: 1,
+    per_page: 10,
+    where: {
+        flag: 'true',
+    }
+}, function (e) {
+    if (e.success) {
+    	
+    	
+        /*alert('Success:\n' +
+            'Count: ' + e.classes.length);*/
+            
+            
+        for (var i = 0; i < e.classes.length; i++) {
+        	var temp = e.classes[i];
+            class_arr.push(temp.name);
+            
+           
+                
+        }
+        for(var i = 0; i <class_arr.length; i++){
+	
+		 class1 = class_arr[0];
+		 class2 = class_arr[1];
+		 class4 =class_arr[2];
+		 class4 =class_arr[3];	
+	}
+    } else {
+        alert('Error:\n' +
+            ((e.error && e.message) || JSON.stringify(e)));
+    }
+});
+
+
+
+/**
+ *
+ * 		function for instruction to message students
+ * 
+ *  
+ */
+
+
+
+function message_stud(e){
+	//this is just for test for message
+	alert("The student messaging function has been clicked");
+}
+
+
+
+
 		
 
 
 
 
-/*button.addEventListener('click',function(e)
-{
-   Titanium.API.info("You clicked the button");
-});*/
-
-
-/*instr.add(instr_classes);
-instr.add(instr_ann);
-instr.add(instr_dd);
-instr.add(ann_tf);
-instr.add(due_tf);
-instr.add(button);
-
-
-instr.add(picker);
-
-picker.add(data);
-instr.add(test_lab);*/
