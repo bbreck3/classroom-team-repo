@@ -1,6 +1,6 @@
 "#instr" : {
-	 //backgroundColor: '#797979',
-	 backgroundColor:'black',
+	 backgroundColor: '#797979',
+	 //backgroundColor:'black',
  fullscreen: false,
     orientationModes: [
 		Ti.UI.PORTRAIT]
@@ -8,14 +8,14 @@
 
 "#instr_due_dates":{
 	
-top:"40%",
+top:"50%",
 width : "25%",
 left:"10%",
 }
  
 
 "#instr_announcements":{
-	top:'20%',
+	top:'30%',
 	width: '30%',
 	left:'10%',
 	
@@ -25,7 +25,7 @@ left:"10%",
 
 
 "#instr_classes":{
-	top:'10%',
+	top:'20%',
 	width: '25%',
 	left:'10%',
 	
@@ -34,14 +34,14 @@ left:"10%",
 
 "#instr_a_tf":{
 	hintText:'Enter an Announcement',
-	top:"25%",
+	top:"35%",
 	right:"10%",
 	width:"70%",
 	
 }
 "#instr_dd_tf":{
 	hintText:'Enter an Due Date',
-	top:"45%",
+	top:"55%",
 	right:"10%",
 	width:"70%",
 	
@@ -50,7 +50,7 @@ left:"10%",
 "#submit": {
 	id:'submit',
 	title: 'Submit',
-	top:"80%",
+	top:"90%",
 	width:"20%",
 	right:"10%",
 		
@@ -61,14 +61,14 @@ left:"10%",
 	title: 'Random',
 	top:"90%",
 	width:"20%",
-	right:"10%",
+	left:"10%",
 		
 	
 }
 
-"#class_picker":{
+"#picker":{
 	
-	 top:'10%',
+	 top:'20%',
 	right: "10%",
 	width:"40%",
 	selectionIndicator: true,
@@ -85,7 +85,7 @@ left:"10%",
 }
 
 "#logout":{
-	 top:'10%',
+	 top:'20%',
 	right: "10%",
 	width:"20%",
 }

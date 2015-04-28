@@ -27,38 +27,21 @@
 		
 
 		<Picker id="picker" top="50" selectionIndicator="true">
-            <PickerColumn id="column1">
-            	
-               <!--<PickerRow title="CMSC 491"/>
+			<PickerColumn id="column1">
+				<PickerRow title="CMSC 491"/>
                 <PickerRow title="CMSC 420"/>
                 <PickerRow title="MATH 301"/>
-                <PickerRow title="MATH 310"/>-->
-            </PickerColumn>
-            <!-- Picker shorthand notation -->
-            <!--<Column id="column2">
-                <Row title="red"/>
-                <Row title="green"/>
-                <Row title="blue"/>
-                <Row title="orange"/>
-       </Column>-->
-        </Picker>
-		
-		
-		
-		<!--<Picker id="class_picker">
-			
-			<PickerColumn id="column1">
-                <PickerRow title="CMSC 491"/>
-                <PickerRow title="CMSC 420"/>
                 <PickerRow title="MATH 310"/>
-                 <PickerRow title="MATH 301"/>
-                
-            </PickerColumn>
-			
-	</Picker>-->
+         </PickerColumn>
+         </Picker>
+          
+        
 		
 		
-		<Label id="test_lab" color="white" shadowColor="#aaa" text="Picker Choice"/>
+		
+		
+		
+		<!-- <Label id="test_lab" color="white" shadowColor="#aaa" text="Picker Choice"/> -->
 		
 		
 		

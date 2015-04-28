@@ -5,17 +5,13 @@ var dd_test = "due dates 1 from instructor";
 var random_val ="";
 var result="";
 var class_arr = new Array();
-
 var class1;
+var class2;
+var class3;
+var class4;
  var class2;
   var class3;
  var class4;
-/*var instr= Ti.UI.createWindow({
-  id : 'instr',
-	color: 'black',
-});*/
-
-//instr.open();
 
 var instr_dd =Ti.UI.createLabel({
 	id:'instr_due_dates',
@@ -91,21 +87,19 @@ var rand = Ti.UI.createButton({
 	width:"20%",
 	right:"10%",
 });
+
 $.picker = Ti.UI.createPicker({
   top:'10%',
 	right: "10%",
 	width:"40%",
-	
+	id: 'picker',
 	selectionIndicator: true,
 	
 });
 
-/*var col = Ti.UI.createPickerColumn();  //createPickerColumn();
-	for(i=0; i<=5; i++){
-		col.addRow(Ti.UI.createPickerRow({title: i}));
-	};
 
-picker.selectionIndicator = true;*/
+
+//picker.selectionIndicator = true;
 /*var data = [];
 data[0] = Ti.UI.createPickerRow({title: CMSC-491, val:CMSC-491});
 data[1] = Ti.UI.createPickerRow({title: CMSC-420, val:CMSC-420});
@@ -119,9 +113,7 @@ data[3] = Ti.UI.createPickerRow({title: MATH-310, val:MATH-310});*/
                  <PickerRow title="MATH 301"/>*/
 //picker.add(data);
 
-var picker = Ti.UI.createPicker({
-  top:50
-});
+
 
 
 /*var data = [];
@@ -158,24 +150,7 @@ var logout = Ti.UI.createButton({
 	width:"40%",
 	title:"Logout"
 });
-Ti.API.info(test_lab.text = picker.getSelectedRow(picker.setSelectedRow(0,1,false)));
 
-/*picker.addEventListener('change', function(e){
-	test_lab.text;
-	
-});*/
-
-/*function picker_selection(e){
-	alert("testing");
-	alert("picker selection: " + test_lab.text);
-	
-}*/
-//instr.add(picker);
-//instr.add(test_lab);
-/*button.addEventListener('click', function(){
-		alert('Anouncement: ' +ann_tf.value + 'Due Dates: ' + due_tf.value);
-		Ti.API.info("Tesing Event Listenere");
-});*/
 
 alert($.instr_a_tf.value + " " + $.instr_dd_tf.value);
 
@@ -234,6 +209,12 @@ Cloud.Objects.update({
 
 }
 
+/*
+ * 
+ * 		THe following grabs the classname from the cloud
+ * 
+ */
+
 		Cloud.Objects.query({
     classname: 'classes',
     page: 1,
@@ -256,10 +237,13 @@ Cloud.Objects.update({
            
                 
         }
-        /*for(var i = 0; i <class_arr.length; i++){
+        for(var i = 0; i <class_arr.length; i++){
 	
-	alert(class_arr[i]);
-}*/
+		 class1 = class_arr[0];
+		 class2 = class_arr[1];
+		 class4 =class_arr[2];
+		 class4 =class_arr[3];	
+	}
     } else {
         alert('Error:\n' +
             ((e.error && e.message) || JSON.stringify(e)));
@@ -267,97 +251,69 @@ Cloud.Objects.update({
 });
 
 
-$.picker.selectionIndicator = true;
-$.column1 = Ti.UI.createPickerColumn();
+
+
+
+
+
+
+/**
+ *
+ * 		Tried to get a picker working...no success..
+ * 
+ * 
+ *  
+ */
+
+
+//Ti.API.info(test_lab.text = picker.getSelectedRow(picker.setSelectedRow(0,1,false)));
+
+/*picker.addEventListener('change', function(e){
+	test_lab.text;
+	
+});*/
+
+/*function picker_selection(e){
+	alert("testing");
+	alert("picker selection: " + test_lab.text);
+	
+}*/
+//instr.add(picker);
+//instr.add(test_lab);
+/*button.addEventListener('click', function(){
+		alert('Anouncement: ' +ann_tf.value + 'Due Dates: ' + due_tf.value);
+		Ti.API.info("Tesing Event Listenere");
+});*/
+
+
+
+/*var column1 = Ti.UI.createPickerColumn();
 
 for(var i=0; i<class_arr.length; i++){
   var row = Ti.UI.createPickerRow({
     title: class_arr[i],
+   
   });
-  column1.addRow(row);
+  column1.addRow(row); alert(class_arr[i]);
 }
 
+picker.add(class_arr);
+picker.selectionIndicator = true;
 
-
-
-
-		
-
-
-/*function updatePicker(picker,class_arr) {
-    var firstregion;
-    var regionsColumn = Ti.UI.createPickerColumn();
-        var countriesColumn = Ti.UI.createPickerColumn();
-    for (var regid in items) {
-        if (!firstregion) {
-            firstregion = regid;
-        }
-        regionsColumn.addRow(
-            Ti.UI.createPickerRow({
-                title : items[regid].name,
-                regid :  regid
-            })
-        );
-    }
-    picker.add([regionsColumn,countriesColumn]);
-    for (var countryid in items[firstregion].countries) {
-        countriesColumn.addRow(
-            Ti.UI.createPickerRow({
-                title:items[firstregion].countries[countryid].name,
-                countryid : countryid
-            })
-        );
-    }*/
- 
- 
-   /* picker.addEventListener('change',function(e) {
-      // var countriesColumn = Ti.UI.createPickerColumn();;
-       if (e.columnIndex==0) {  // regions
-            var countries = items[e.row.regid].countries;
-            for (var countryid in items[e.row.regid].countries) {
-                countriesColumn.addRow(
-                    Ti.UI.createPickerRow({
-                        title     : items[e.row.regid].countries[countryid].name,
-                        countryid : countryid
-                    })
-                );
-            }
-            picker.columns = [regionsColumn,countriesColumn];
-            picker=Titanium.UI.createPicker();
-            picker.reloadColumn(countriesColumn);
-       }
- 
- 
-    });
-//  picker.add([regionsColumn,countriesColumn]);
-    picker.selectionIndicator = true;
- 
-}*/
-
-
-/*function submit(e){
-	
-	alert('Anouncement: ' +a_test + 'Due Dates: ' + dd_test);
-		//Ti.API.info("Tetsing fuction call");	
-		
-		Cloud.Objects.update({
-		classname: 'dueDates',
-		id: '553693c47eead2058677f96c',  
-		fields:{
-			dueText: dd_test,
-		
-		}
-		
-	
-}, function(e){
-	if(e.success){
-		alert('Success!');
-	} else {
-		alert("Error: \n" + 
-				((e.error && e.message) || JSON.stringify(e)));
-	}
+$.picker.addEventListener('change',function(e){
+  Ti.API.info("User selected date: " + e.value.toLocaleString());
 });
-};*/
+*/
+
+
+
+
+
+
+		
+
+
+
 
 
 /*
@@ -408,21 +364,6 @@ alert('random val for checkin: ' +result );
 
 
 
-/*button.addEventListener('click',function(e)
-{
-   Titanium.API.info("You clicked the button");
-});*/
 
 
-/*instr.add(instr_classes);
-instr.add(instr_ann);
-instr.add(instr_dd);
-instr.add(ann_tf);
-instr.add(due_tf);
-instr.add(button);
 
-
-instr.add(picker);
-
-picker.add(data);
-instr.add(test_lab);*/
