@@ -20,7 +20,15 @@ var instr_dd =Ti.UI.createLabel({
 	text:'Dues Dates',
 });
 
-
+$.message.addEventListener('click', function() {
+	// Ti.App.cur_cid = cid;
+ 	// Ti.App.cur_name = name;
+	
+	var wmsg=Alloy.createController('messages').getView();
+ 	wmsg.cid = "1";
+ 	
+ 	wmsg.open();
+});
 
 
 var instr_ann =Ti.UI.createLabel({
@@ -70,22 +78,22 @@ var due_tf = Ti.UI.createTextField({
 	color:hintText.color,
 });
 
-var button = Ti.UI.createButton({
-	id: 'submit',
-	title: 'Submit',
-	top:"80%",
-	width:"20%",
-	right:"10%",
-	
-});
-
-var rand = Ti.UI.createButton({
-	id:'random',
-	title: 'Random',
-	top:"90%",
-	width:"20%",
-	right:"10%",
-});
+// var button = Ti.UI.createButton({
+	// id: 'submit',
+	// //title: 'Submit',
+	// top:"80%",
+	// width:"20%",
+	// right:"10%",
+// 	
+// });
+// 
+// var rand = Ti.UI.createButton({
+	// id:'random',
+	// //title: 'Random',
+	// top:"90%",
+	// width:Ti.UI.fill,
+	// right:"10%",
+// });
 
 var picker = Ti.UI.createPicker({
   top:'20%',

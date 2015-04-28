@@ -49,9 +49,10 @@ left:"10%",
 
 "#submit": {
 	id:'submit',
-	title: 'Submit',
+	
 	top:"80%",
-	width:"20%",
+	width: Ti.UI.FILL,
+	height:Ti.UI.SIZE,
 	right:"10%",
 		
 	
@@ -60,16 +61,18 @@ left:"10%",
 "#message": {
 	id:'message',
 	top:"70%",
-	width:"20%",
+	width: Ti.UI.FILL,
+	height:Ti.UI.SIZE,
 	right:"10%",
 		
 	
 }
 "#random": {
 	id:'random',
-	title: 'Random',
+	
 	top:"90%",
-	width:"20%",
+	width: Ti.UI.FILL,
+	height:Ti.UI.SIZE,
 	right:"10%",
 		
 	
