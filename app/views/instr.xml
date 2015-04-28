@@ -18,18 +18,21 @@
 		
 		<Label id="instr_announcements" color="white" shadowColor="#aaa" text="Annuncements"/>
 		
-		<TextField id="instr_a_tf" text="Enter an Annoucement"></TextField>
-		
-		<TextField id="instr_dd_tf" text="Enter an Annoucement"></TextField>
+		<TextField id="instr_a_tf" text="Enter an Annoucement"></TextField>  
+
+		<TextField id="instr_dd_tf" text="Enter an Due Dates"></TextField>
 		<Button id="submit" title="Submit" text="Submit" onClick="submit"> </Button>
 		<Button id="random" title ="generate random" onClick="random"> </Button>
+		<Button id="logout" title ="Logout" onClick="logout"> </Button>
 		
+
 		<Picker id="picker" top="50" selectionIndicator="true">
             <PickerColumn id="column1">
-                <PickerRow title="CMSC 491"/>
+            	
+               <!--<PickerRow title="CMSC 491"/>
                 <PickerRow title="CMSC 420"/>
                 <PickerRow title="MATH 301"/>
-                <PickerRow title="MATH 310"/>
+                <PickerRow title="MATH 310"/>-->
             </PickerColumn>
             <!-- Picker shorthand notation -->
             <!--<Column id="column2">
