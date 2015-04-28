@@ -28,9 +28,9 @@
 		<Picker id="picker" top="50" selectionIndicator="true">
             <PickerColumn id="column1">
                 <PickerRow title="CMSC 491"/>
-                <PickerRow title="CMSC 420"/>
-                <PickerRow title="MATH 301"/>
-                <PickerRow title="MATH 310"/>
+                <PickerRow title="CHEM 100"/>
+                <PickerRow title="MATH 201"/>
+                <PickerRow title="CMSC 508"/>
             </PickerColumn>
             <!-- Picker shorthand notation -->
             <!--<Column id="column2">

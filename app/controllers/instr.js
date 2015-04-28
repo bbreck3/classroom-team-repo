@@ -276,6 +276,7 @@ function logout(e){
  * 
  */
 function random(minVal, maxVal){
+	//alert('name: '+$.picker.getSelectedRow(0).title);
 	var minVal =1;
 	var maxVal=61;
 	var check_in_val_pool =[ 'a', 'b', 'c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
@@ -296,10 +297,38 @@ function random(minVal, maxVal){
 	}
 	result= randVal1+"" +randVal2 +"" + randVal3 + ""+randVal4;	
 	
-alert('random val for checkin: ' +result );
-
-};
-
+//alert('random val for checkin: ' +result );
+Cloud.Objects.query({
+		
+        classname : 'classes',
+ 		where: {name :$.picker.getSelectedRow(0).title}   
+	}, function(e){
+		if(e.success){
+		classobjID = e.classes[0];
+		//alert('asd'+e.classes.length);
+		Cloud.Objects.update({
+			classname : 'classes',
+	 		id : classobjID.id,
+	 		//where: {name :picker.getSelectedRow(0).title},  
+			fields:{
+				checkin: result,
+		
+			}
+		
+	
+				}, function(e){
+					if(e.success){
+						alert('New checkin code for '+$.picker.getSelectedRow(0).title+': '+result);
+					} else {
+						alert("Error: \n" + 
+								((e.error && e.message) || JSON.stringify(e)));
+					}
+				});
+					} else{
+						alert('Error: ' + e.error + e.message);
+					}
+});
+}
 
 		
 
